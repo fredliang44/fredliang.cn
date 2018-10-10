@@ -30,7 +30,7 @@
           </a>
         </li>
         <li>
-          <a>
+          <a href="https://storage.fredliang.cn/Wechat-QRCode.jpeg" target="_blank">
             <svg class="icon" :width="iconSize" :height="iconSize" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="index" transform="translate(-148.000000, -471.000000)" fill="#000000">
@@ -147,9 +147,17 @@ export default {
   margin: 4em;
 }
 .position > li {
+  max-width: 12em;
+  width: auto;
   display: block;
   margin: 0;
 }
+
+.position > li:hover {
+  transform:translateX(10px);
+  transition: all 0.5s;
+}
+
 .count-wrapper {
   margin-top: 6em;
   text-align: left;
@@ -182,8 +190,8 @@ h1 {
 li {
   font-weight: 500;
   color: gray;
-  margin-left: 0;
-  margin-right: 0.9em;
+  margin-left: 0 !important;
+  margin-right: 0.9em !important;
   font-size: 0.7em;
   padding: 0.3em 0;
 }

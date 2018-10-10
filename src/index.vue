@@ -54,7 +54,7 @@ export default {
   float: right;
 }
 .header {
-  margin: 4em 4em 0 4em;
+  margin: 5em 5em 0 5em;
   font-size: 0.84em;
   text-align: left;
 }
