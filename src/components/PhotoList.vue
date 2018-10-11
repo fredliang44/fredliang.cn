@@ -47,7 +47,7 @@ h2 {
   margin-bottom: 4em;
 }
 .top {
-  padding: 2em 4em 0em 4em;
+  padding: 4em 4em 0em 4em;
 }
 h1, ul {
   text-align: left;

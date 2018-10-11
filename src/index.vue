@@ -9,7 +9,7 @@
           <li><router-link to="/about" active-class="active">About</router-link></li>
           <div id="switch-wrapper">
             <li>
-              <button id="lang-switch">
+              <button v-on:click="changeLocale" id="lang-switch">
                 <p>EN / 中文</p>
               </button>
             </li>
@@ -30,8 +30,18 @@ import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
+  methods: {
+    changeLocale: function() {
+      if (this.$i18n.locale === 'en') {
+        this.$i18n.locale = 'zh'
+      } else {
+        this.$i18n.locale = 'en'
+      }
+    }
+  },
   data () {
-    return { langs: ['en', 'zh'] }
+    return { 
+    }
   },
   components: {
     Home,
@@ -59,7 +69,7 @@ export default {
   float: right;
 }
 .header {
-  padding: 5em 5em 0 5em;
+  padding: 4em 5em 0 5em;
   font-size: 0.84em;
   text-align: left;
 }
@@ -90,6 +100,7 @@ ul {
   font-size: 2em;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 li {
   display: inline-block;

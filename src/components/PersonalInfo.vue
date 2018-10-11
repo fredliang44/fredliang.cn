@@ -2,10 +2,10 @@
     <div class="part1">
       <h1 id="name">Fred Liang</h1>
       <ul class="position">
-        <li>Product Manager</li>
-        <li>Visual Designer</li>
-        <li>Film Producer</li>
-        <li>Web Developer</li>
+        <li>{{ $t("position[0]") }}</li>
+        <li>{{ $t("position[1]") }}</li>
+        <li>{{ $t("position[2]") }}</li>
+        <li>{{ $t("position[3]") }}</li>
       </ul>
 
       <ul>
@@ -179,6 +179,9 @@ export default {
 }
 #statement {
   color: white;
+}
+.position {
+    margin: 1em 0;
 }
 h1, ul {
   text-align: left;
