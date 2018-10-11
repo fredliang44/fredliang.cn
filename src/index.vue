@@ -1,18 +1,16 @@
 <template>
-  <div id="app" >
+  <div id="app">
     <div id="wrapper">
       <div class="header">
-        <ul>
-          <li><router-link to="/" active-class="active" exact>Home</router-link></li>
-          <li><a href="https://blog.fredliang.cn" target="_blank" rel="noopener">Blog</a></li>
-          <li><router-link to="/photo" active-class="active">Photo</router-link></li>
-          <li><router-link to="/about" active-class="active">About</router-link></li>
+        <ul :class="this.$i18n.locale">
+          <li><router-link to="/" active-class="active" exact>{{ $t("navigation[0]") }}</router-link></li>
+          <li><a href="https://blog.fredliang.cn" target="_blank" rel="noopener">{{ $t("navigation[1]") }}</a></li>
+          <li><router-link to="/photo" active-class="active">{{ $t("navigation[2]") }}</router-link></li>
+          <li><router-link to="/about" active-class="active">{{ $t("navigation[3]") }}</router-link></li>
           <div id="switch-wrapper">
-            <li>
-              <button v-on:click="changeLocale" id="lang-switch">
-                <p>EN / 中文</p>
-              </button>
-            </li>
+            <button v-on:click="changeLocale" id="lang-switch">
+              <p>EN / 中文</p>
+            </button>
           </div>
         </ul>
       </div>
@@ -31,33 +29,78 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'app',
   methods: {
-    changeLocale: function() {
-      if (this.$i18n.locale === 'en') {
-        this.$i18n.locale = 'zh'
-      } else {
-        this.$i18n.locale = 'en'
+    changeLocale: function () {
+      this.$i18n.locale === 'zh' ? this.$i18n.locale = 'en' : this.$i18n.locale = 'zh'
+      this.setCookie('lang', this.$i18n.locale, 30)
+    },
+    setCookie: function (cname, cvalue, exdays) {
+      var d = new Date()
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))
+      var expires = 'expires=' + d.toUTCString()
+      document.cookie = cname + '=' + cvalue + '; ' + expires
+    },
+    getCookie: function (cookieName) {
+      var allcookies = document.cookie
+      var cookiePos = allcookies.indexOf(cookieName)
+      if (cookiePos !== -1) {
+        cookiePos += cookieName.length + 1
+        var cookieEnd = allcookies.indexOf(';', cookiePos)
+        if (cookieEnd === -1) {
+          cookieEnd = allcookies.length
+        }
+        var value = unescape(allcookies.substring(cookiePos, cookieEnd))
       }
+      return value
     }
   },
   data () {
-    return { 
+    return {
+      locale: 'en'
     }
   },
   components: {
     Home,
     Footer
+  },
+  mounted: function () {
+    if (this.getCookie('lang') !== undefined) {
+      this.$i18n.locale = this.getCookie('lang')
+    }
   }
 }
 </script>
 
 <style>
+
+@font-face {
+    font-family: "FZBWKSJW";
+    src: url("./assets/font/FZBWKSJW.eot"); /* IE9 */
+    src: url("./assets/font/FZBWKSJW.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("./assets/font/FZBWKSJW.woff") format("woff"), /* chrome、firefox */
+    url("./assets/font/FZBWKSJW.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("./assets/font/FZBWKSJW.svg#FZBWKSJW") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #353432;
 }
+.en {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+.zh {
+  font-family: 'FZBWKSJW','Avenir', Helvetica, Arial, sans-serif;
+}
+
 #lang-switch {
   transform: translateY(-4px);
 }
@@ -69,9 +112,13 @@ export default {
   float: right;
 }
 .header {
+  height: 2.4em;
   padding: 4em 5em 0 5em;
   font-size: 0.84em;
   text-align: left;
+}
+.header > ul > li {
+  width: 4em;
 }
 .active {
   color: #353432;
@@ -114,6 +161,7 @@ a {
   transition: color 1s;
 }
 body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   top: 0;
   margin: 0;
 }

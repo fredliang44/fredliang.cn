@@ -1,11 +1,7 @@
 <template>
     <div class="top">
-      <h1>Photo</h1>
-      <div class="paragraph">
-        <p>To see the world, things dangerous to come to,</p>
-        <p>to see behind walls,  to draw closer,</p>
-        <p>to find each other,  and to feel.</p>
-        <p>That is the purpose of life.</p>
+      <h1 :class="this.$i18n.locale" style="height: 1.5em;">{{ $t("photo.title") }}</h1>
+      <div v-html="$t('photo.description')" class="paragraph" :class="this.$i18n.locale">
       </div>
 
       <div class="photo-block">
@@ -27,7 +23,7 @@
 
 <script>
 export default {
-    name: 'PhotoList',
+  name: 'PhotoList'
 }
 </script>
 
@@ -42,6 +38,7 @@ h2 {
   font-size: 1.6em;
 }
 .paragraph {
+  height: 10em;
   text-align: left;
   font-size: 1.2em;
   margin-bottom: 4em;

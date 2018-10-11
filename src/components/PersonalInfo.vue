@@ -1,7 +1,7 @@
 <template>
     <div class="part1">
-      <h1 id="name">Fred Liang</h1>
-      <ul class="position">
+      <h1 id="name" :class="this.$i18n.locale">{{ $t("name") }}</h1>
+      <ul class="position" :class="this.$i18n.locale">
         <li>{{ $t("position[0]") }}</li>
         <li>{{ $t("position[1]") }}</li>
         <li>{{ $t("position[2]") }}</li>
@@ -116,7 +116,7 @@
           <p>12</p>
         </div>
         <div style="display: inline-block">
-          <p style="font-size: 1.5em;"> visitors </p>
+          <p style="font-size: 1.5em;" :class="this.$i18n.locale">{{ $t("visitors") }}</p>
         </div>
       </div>
 
@@ -128,15 +128,17 @@
 export default {
   name: 'PersonalInfo',
   data () {
-    return { 
-      iconSize:'36px'
+    return {
+      iconSize: '36px'
     }
-  },
+  }
 }
 </script>
 
 <style>
-
+#name {
+    height: 1.5em;
+}
 .icon:hover {
   width: 40px;
   height: 40px;
@@ -159,8 +161,18 @@ export default {
 }
 
 .count-wrapper {
+  display: flex;
+  height: 4em;
   margin-top: 6em;
   text-align: left;
+}
+.visitor-count + div > p {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin: 0;
+}
+.visitor-count + div {
+  height: 3em;
 }
 .visitor-count {
   display: inline-block;

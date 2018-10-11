@@ -1,3 +1,19 @@
 {
-    "position":["Product Manager","Visual Designer","Film Producer","Web Developer"]
+    "name":"Fred Liang",
+    "navigation":["Home", "Blog", "Photo", "About"],
+    "visitors":"visitors",
+    "position":["Product Manager","Visual Designer","Film Producer","Web Developer"],
+    "whoAmI": {
+        "title":"Who Am I",
+        "highSchool":"Since 2013, I started working on Video Production. Being Obsessed with providing gorgeous video effects and significant thoughts to my schoolmates.",
+        "college":"During my college life, I joined <a target=\"_blank\" rel=\"noopener\" href=\"//hustunique.com\">Unique Studio</a>. My work has changed from Visual Design to Product Management. Dozens of technologiesand approaches had been tried to enrich my my horizons.",
+        "showWorksDescription":"With my pleasure, here are some of my works:",
+        "workList":["A Domestic Hackathon","A Hackathon Management System","A Tool Present Relationships in Unique Studio"],
+        "besides":"Besides that, I have been maintaining some infrastructure for my collaborators.",
+        "infrastructuresDescription":["A Docker Container Manage System"," A Business Intelligence System", "Open platform of Unique Studio"]
+    },
+    "photo": {
+        "title": "Photo",
+        "description":"<p>To see the world, things dangerous to come to,</p><p>to see behind walls,  to draw closer,</p><p>to find each other,  and to feel.</p><p>That is the purpose of life.</p>"
+    }
 }

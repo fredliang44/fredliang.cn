@@ -1,26 +1,36 @@
 <template>
     <div class="part2-wrapper">
-      <div class="part2">
-        <h1 id="statement-title">Who am I</h1>
+      <div class="part2"  :class="this.$i18n.locale">
+        <h1 id="statement-title" :class="this.$i18n.locale">{{ $t("whoAmI.title") }}</h1>
         <div class="statement">
-          <p>Since 2013, I started working on Video Production. Being Obsessed with 
-            providing gorgeous video effects and significant thoughts to my schoolmates.</p>
-          <p>During my college life, I joined <a target="_blank" rel="noopener" href="//hustunique.com">Unique Studio</a>. 
-          My work has changed from Visual Design to Product Management. Dozens of technologies
-           and approaches had been tried to enrich my my horizons.</p>
-          <p>With my pleasure, here are some of my works:</p>
-
+          <p>{{ $t("whoAmI.highSchool") }}</p>
+          <p v-html="$t('whoAmI.college')"></p>
+          <p>{{ $t("whoAmI.showWorksDescription") }}</p>
+          
           <ul>
-            <li><p><a href="//hack.hustunique.com" rel="noopener" target="_blank">Unique Hackday</a> ---- A Domestic Hackathon</p></li>
-            <li><p><a href="//console.hack.hustunique.com" rel="noopener" target="_blank">Unique Hackday Console</a> ---- A Hackathon Management System</p></li>
-            <li><p><a href="//fmt.hustunique.com" rel="noopener" target="_blank">Family Tree</a> ---- A Tool Present Relationships in Unique Studio</p></li>
+            <li>
+              <p>
+                <a href="//hack.hustunique.com" rel="noopener" target="_blank">
+                Unique Hackday
+                </a> ---- {{ $t("whoAmI.workList[0]") }}
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <a href="//console.hack.hustunique.com" rel="noopener" target="_blank">
+                Unique Hackday Console
+                </a> ---- {{ $t("whoAmI.workList[1]") }}
+              </p>
+            </li>
+            <li><p><a href="//fmt.hustunique.com" rel="noopener" target="_blank">Family Tree</a> ---- {{ $t("whoAmI.workList[2]") }}</p></li>
           </ul>
           
-          <p>Besides that, I have been maintaining some infrastructure for my collaborators.</p>
+          <p>{{ $t("whoAmI.besides") }}</p>
           <ul>
-            <li><p><a href="//manager.fredliang.cn" rel="noopener" target="_blank">Rancher</a> ---- A Docker Container Manage System</p></li>
-            <li><p><a href="//data.fredliang.cn" rel="noopener" target="_blank">Metabase</a> ---- A Business Intelligence System</p></li>
-            <li><p><a href="//open.hustunique.com" rel="noopener" target="_blank">Open platform</a> ---- Open platform of Unique Studio</p></li>
+            <li><p><a href="//manager.fredliang.cn" rel="noopener" target="_blank">Rancher</a> ---- {{ $t("whoAmI.infrastructuresDescription[0]") }}</p></li>
+            <li><p><a href="//data.fredliang.cn" rel="noopener" target="_blank">Metabase</a> ---- {{ $t("whoAmI.infrastructuresDescription[1]") }}</p></li>
+            <li><p><a href="//open.hustunique.com" rel="noopener" target="_blank">Open Platform</a> ---- {{ $t("whoAmI.infrastructuresDescription[2]") }}</p></li>
           </ul>
         </div>
       </div>
@@ -30,17 +40,20 @@
 <script>
 
 export default {
-  name: 'WhoAmI',
+  name: 'WhoAmI'
 
 }
 </script>
 
 
-<style scoped>
+<style>
 p > a {
-  text-decoration: underline;
-  color: white;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  text-decoration: underline !important;
+  color: white !important;
 }
+
 ul, li > p {
   margin: 0;
 }
@@ -48,6 +61,9 @@ ul, li > p {
   color: white;
   font-size: 1.2em;
   text-align: left;
+}
+.statement > ul > li > p {
+  color: #b9b9b9;
 }
 @media only screen and (min-width: 500px) {
   .statement {
@@ -64,5 +80,8 @@ ul, li > p {
 }
 #statement-title {
   color: white;
+}
+.statement > ul > li {
+  display: block;
 }
 </style>
