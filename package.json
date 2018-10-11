@@ -6,15 +6,12 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve",
-    "nuxt": "nuxt"
+    "deploy": "npm run build && now --public && now alias"
   },
   "dependencies": {
     "import": "^0.0.6",
-    "offline-plugin": "^5.0.5",
     "prerender-spa-plugin": "^3.4.0",
     "register-service-worker": "^1.0.0",
-    "three": "^0.97.0",
-    "three-addons": "^1.2.0",
     "vue": "^2.5.17",
     "vue-i18n": "^8.1.0",
     "vue-progressive-image": "^3.1.0",
@@ -25,8 +22,6 @@
     "@vue/cli-plugin-eslint": "^3.0.5",
     "@vue/cli-plugin-pwa": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
-    "nuxt": "^2.1.0",
-    "vue-lazyload": "^1.2.6",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
