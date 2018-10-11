@@ -1,28 +1,32 @@
 <template>
   <div id="app" >
-    <div class="header">
-      <ul>
-        <li><router-link to="/" active-class="active" exact>Home</router-link></li>
-        <li><a href="https://blog.fredliang.cn" target="_blank" rel="noopener">Blog</a></li>
-        <li><router-link to="/photo" active-class="active">Photo</router-link></li>
-        <li><router-link to="/about" active-class="active">About</router-link></li>
-        <div id="switch-wrapper">
-          <li>
-            <button id="lang-switch">
-              <p>EN / 中文</p>
-            </button>
-          </li>
-        </div>
-      </ul>
+    <div id="wrapper">
+      <div class="header">
+        <ul>
+          <li><router-link to="/" active-class="active" exact>Home</router-link></li>
+          <li><a href="https://blog.fredliang.cn" target="_blank" rel="noopener">Blog</a></li>
+          <li><router-link to="/photo" active-class="active">Photo</router-link></li>
+          <li><router-link to="/about" active-class="active">About</router-link></li>
+          <div id="switch-wrapper">
+            <li>
+              <button id="lang-switch">
+                <p>EN / 中文</p>
+              </button>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <transition name="slide">
+        <router-view id="router" />
+      </transition>
     </div>
-    <transition>
-      <router-view id="router" />
-    </transition>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import Home from './pages/Home.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'app',
@@ -31,6 +35,7 @@ export default {
   },
   components: {
     Home,
+    Footer
   }
 }
 </script>
@@ -54,13 +59,16 @@ export default {
   float: right;
 }
 .header {
-  margin: 5em 5em 0 5em;
+  padding: 5em 5em 0 5em;
   font-size: 0.84em;
   text-align: left;
 }
 .active {
   color: #353432;
-  padding-bottom:3px; border-bottom:2px solid #000
+  padding-bottom:3px; border-bottom:2px solid #000;
+}
+#wrapper {
+  box-shadow: 0 10px 10px -10px #ccc;
 }
 button:active  {
   background-color: #353432 !important;
@@ -95,6 +103,7 @@ a {
   transition: color 1s;
 }
 body {
+  top: 0;
   margin: 0;
 }
 </style>

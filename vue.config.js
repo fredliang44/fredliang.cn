@@ -7,15 +7,25 @@ module.exports = {
     if (process.env.NODE_ENV !== 'production') return
     return {
       plugins: [
-        new PrerenderSpaPlugin(
+        new PrerenderSpaPlugin({
           // Absolute path to compiled SPA
-          path.resolve(__dirname, 'dist'),
+          staticDir: path.resolve(__dirname, './dist'),
           // List of routes to prerender
-          [ '/', '/about', ],
-          {
-              // options
+          routes: [ '/',  '/photo', '/about'],
+          // Options
+          postProcess(context) {
+            let titles = {
+              '/': 'Fred Liang',
+              '/photo': 'Photo',
+              '/about': 'About Me'
+            };
+            context.html = context.html.replace(
+              /<title>[^<]*<\/title>/i,
+              `<title>${titles[context.route]}</title>`
+            )
+            return context
           }
-        ),
+        }),
       ]
     }
   }

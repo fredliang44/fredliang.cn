@@ -4,7 +4,9 @@
     </div>
 </template>
 
+
 <script>
+/* eslint-disable */
   import THREE from '../libs/three/three';
 
   export default {

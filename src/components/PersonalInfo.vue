@@ -10,7 +10,7 @@
 
       <ul>
         <li>
-          <a href="//github.com/fredliang44" target="_blank">
+          <a href="//github.com/fredliang44" target="_blank" rel="noopener">
             <svg class="icon" :width="iconSize" :height="iconSize" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="index" transform="translate(-96.000000, -471.000000)" fill="#000000">
@@ -30,7 +30,7 @@
           </a>
         </li>
         <li>
-          <a href="https://storage.fredliang.cn/Wechat-QRCode.jpeg" target="_blank">
+          <a href="https://storage.fredliang.cn/Wechat-QRCode.jpeg" rel="noopener" target="_blank">
             <svg class="icon" :width="iconSize" :height="iconSize" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="index" transform="translate(-148.000000, -471.000000)" fill="#000000">
@@ -50,7 +50,7 @@
           </a>
         </li>
         <li>
-          <a href="//twitter.com/fredliang" target="_blank">
+          <a href="//twitter.com/fredliang" rel="noopener" target="_blank">
             <svg class="icon" :width="iconSize" :height="iconSize" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="index" transform="translate(-200.000000, -471.000000)" fill="#000000">
@@ -90,7 +90,7 @@
           </a>
         </li>
         <li>
-          <a href="//www.linkedin.com/in/liangzhibo/" target="_blank">
+          <a href="//www.linkedin.com/in/liangzhibo/" rel="noopener" target="_blank">
             <svg class="icon" :width="iconSize" :height="iconSize" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="index" transform="translate(-304.000000, -471.000000)" fill="#000000">
