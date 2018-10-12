@@ -2,7 +2,7 @@
   <div class="footer">
     <div id="context">
         <p>Design & Code With ❤️ By Fred Liang</p>
-        <p>京ICP备16033945号-2</p>
+        <p class="zh">京ICP备16033945号-2</p>
     </div>
   </div>
 </template>

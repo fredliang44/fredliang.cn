@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import PersonalStatement from '../components/PersonalStatement.vue'
+import PersonalStatement from '@/components/PersonalStatement.vue'
 export default {
   name: 'About',
   components: {

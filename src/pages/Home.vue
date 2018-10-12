@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Background from '../components/Background.vue'
-import PersonalInfo from '../components/PersonalInfo.vue'
-import WhoAmI from '../components/WhoAmI.vue'
+import Background from '@/components/Background.vue'
+import PersonalInfo from '@/components/PersonalInfo.vue'
+import WhoAmI from '@/components/WhoAmI.vue'
 
 export default {
   name: 'Home',

@@ -17,12 +17,17 @@ export default new Router({
       component: Home
     },
     {
-      path: '/photo',
+      path: '/photo/',
       name: 'Photo',
       component: Photo
     },
     {
-      path: '/about',
+      path: '/photo/:page',
+      name: 'Photo',
+      component: Photo
+    },
+    {
+      path: '/about/',
       name: 'About',
       component: About
     },

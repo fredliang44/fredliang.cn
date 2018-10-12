@@ -4,9 +4,9 @@
       <div class="header">
         <ul :class="this.$i18n.locale">
           <li><router-link to="/" active-class="active" exact>{{ $t("navigation[0]") }}</router-link></li>
-          <li><a href="https://blog.fredliang.cn" target="_blank" rel="noopener">{{ $t("navigation[1]") }}</a></li>
-          <li><router-link to="/photo" active-class="active">{{ $t("navigation[2]") }}</router-link></li>
-          <li><router-link to="/about" active-class="active">{{ $t("navigation[3]") }}</router-link></li>
+          <li><router-link to="/photo" active-class="active">{{ $t("navigation[1]") }}</router-link></li>
+          <li><router-link to="/about" active-class="active">{{ $t("navigation[2]") }}</router-link></li>
+          <li><a href="https://blog.fredliang.cn" target="_blank" rel="noopener" id="refer">{{ $t("navigation[3]") }}</a></li>
           <div id="switch-wrapper">
             <button v-on:click="changeLocale" id="lang-switch">
               <p>EN / 中文</p>
@@ -19,12 +19,13 @@
       </transition>
     </div>
     <Footer/>
+    
   </div>
 </template>
 
 <script>
-import Home from './pages/Home.vue'
-import Footer from './components/Footer.vue'
+import Home from '@/pages/Home.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'app',
@@ -85,10 +86,24 @@ export default {
     font-weight: normal;
 }
 
+.header > ul > li > a:hover {
+  color: #353432;
+  transition: all 0.5s,
+}
+
+#refer:hover {
+  transition: all 0.5s;
+  border: 2px #353432 solid;
+}
+
+#refer {
+  border: 2px #cccccc solid;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
 
 
 #app {
-  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

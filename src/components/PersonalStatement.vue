@@ -1,6 +1,6 @@
 <template>
-    <div class="top">
-        <h1>About</h1>
+    <div class="top" :class="this.$i18n.locale" >
+        <h1>{{ $t("about.title") }}</h1>
     </div>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 
 <style>
 .top {
-  padding: 4em 4em 0em 4em;
+  padding: 4em;
 }
 h1, ul {
   text-align: left;

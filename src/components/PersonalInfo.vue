@@ -111,12 +111,12 @@
         </li>
       </ul>
 
-      <div class="count-wrapper">
-        <div class="visitor-count">
-          <p>12</p>
-        </div>
+      <div class="count-wrapper" :class="this.$i18n.locale">
+        <button id="visitor-count" @click="flushVisitor">
+          <p id="count">0</p>
+        </button>
         <div style="display: inline-block">
-          <p style="font-size: 1.5em;" :class="this.$i18n.locale">{{ $t("visitors") }}</p>
+          <p style="font-size: 1.5em;">{{ $t("visitors") }}</p>
         </div>
       </div>
 
@@ -127,10 +127,38 @@
 
 export default {
   name: 'PersonalInfo',
+  methods: {
+    flushVisitor: function () {
+      this.$http.get('https://open.fredliang.cn/blog/visitor')
+        .then(response => {
+          this.visitors = response.data.data
+          var count = {
+            num: 0
+          }
+          this.$anime({
+            targets: count,
+            num: this.visitors,
+            round: 1,
+            easing: 'linear',
+            update: function () {
+              var el = document.querySelector('#count')
+              el.innerHTML = JSON.stringify(count.num)
+            }
+          })
+        })
+        .catch(error => {
+          console.log(error.response)
+        })
+    }
+  },
   data () {
     return {
-      iconSize: '36px'
+      iconSize: '36px',
+      visitors: 0
     }
+  },
+  mounted: function () {
+    this.flushVisitor()
   }
 }
 </script>
@@ -166,24 +194,26 @@ export default {
   margin-top: 6em;
   text-align: left;
 }
-.visitor-count + div > p {
+#visitor-count + div > p {
   font-size: 1.5em;
   line-height: 2em;
   margin: 0;
 }
-.visitor-count + div {
+#visitor-count + div {
   height: 3em;
 }
-.visitor-count {
+#visitor-count {
+  margin: 0;
+  padding: 0;
   display: inline-block;
   width: 8em;
-  height: 3em;
+  height: 4em;
   background-color: #353432;
   margin-right: 2em;
 }
-.visitor-count > p{
+#visitor-count > p{
   color: white;
-  font-size: 1.3em;
+  font-size: 1.6em;
   line-height: 2.4em;
   vertical-align:middle;
   margin: 0;

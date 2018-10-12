@@ -4,13 +4,21 @@ var path = require('path')
 
 var manifestJSON = require('./public/manifest.json')
 
-var pwaArgs = {
-  themeColor: manifestJSON.theme_color,
-  name: manifestJSON.short_name,
-  msTileColor: manifestJSON.background_color
-}
-
 module.exports = {
+  pwa: {
+    name: manifestJSON.short_name,
+    themeColor: manifestJSON.theme_color,
+    msTileColor: '#ffffff',
+    appleMobileWebAppCapable: 'yes',
+    appleMobileWebAppStatusBarStyle: 'black',
+
+    // configure the workbox plugin
+    workboxPluginMode: 'GenerateSW',
+    workboxOptions: {
+      skipWaiting: true,
+      clientsClaim: true
+    }
+  },
   configureWebpack: config => {
     if (process.env.NODE_ENV !== 'production') return
     return {
@@ -36,10 +44,5 @@ module.exports = {
         })
       ]
     }
-  },
-  chainWebpack: config => {
-    config.plugin('pwa').tap(args => {
-      return [pwaArgs]
-    })
   }
 }

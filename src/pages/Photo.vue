@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import PhotoList from '../components/PhotoList.vue'
+import PhotoList from '@/components/PhotoList.vue'
 export default {
   name: 'Photo',
   components: {

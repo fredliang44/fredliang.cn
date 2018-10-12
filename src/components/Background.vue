@@ -7,7 +7,7 @@
 
 <script>
 /* eslint-disable */
-  import THREE from '../libs/three/three';
+  import THREE from '@/libs/three/three';
 
   export default {
     data () {

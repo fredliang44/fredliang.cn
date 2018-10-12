@@ -1,6 +1,6 @@
 {
     "name":"Fred Liang",
-    "navigation":["Home", "Blog", "Photo", "About"],
+    "navigation":["Home", "Photo", "About", "Blog"],
     "visitors":"visitors",
     "position":["Product Manager","Visual Designer","Film Producer","Web Developer"],
     "whoAmI": {
@@ -15,5 +15,8 @@
     "photo": {
         "title": "Photo",
         "description":"<p>To see the world, things dangerous to come to,</p><p>to see behind walls,  to draw closer,</p><p>to find each other,  and to feel.</p><p>That is the purpose of life.</p>"
+    },
+    "about": {
+        "title":"About Me"
     }
 }
