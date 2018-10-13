@@ -14,14 +14,25 @@
               <p>{{ item.time }}</p>
             </div>
           </div>
-          <!-- <img style="width: 100%" :data-src="item.imgUrl + '?x-oss-process=image/resize,h_1080'" :data-loading="item.imgUrl + '?x-oss-process=image/resize,h_200'">   -->
-          <v-lazy-image style="width: 100%" :src-placeholder="item.url + '?x-oss-process=image/resize,w_256'" :src="item.url + '?x-oss-process=image/resize,h_1080'"  :srcset="item.url + '?x-oss-process=image/resize,w_256 256w,'
-           + item.url + '?x-oss-process=image/resize,w_512 512w,'
-           + item.url + '?x-oss-process=image/resize,w_1024 1024w,'
-           + item.url + '?x-oss-process=image/resize,w_2048 2048w,'
-           + item.url + '?x-oss-process=image/resize,w_3072 3072w'"/>
+          <picture>
+             <!-- <source
+                type="image/webp"
+                :srcset="item.url + '?x-oss-process=image/resize,w_256/format,webp 256w,'
+                  + item.url + '?x-oss-process=image/resize,w_512/format,webp 512w,'
+                  + item.url + '?x-oss-process=image/resize,w_1024/format,webp 1024w,'
+                  + item.url + '?x-oss-process=image/resize,w_2048/format,webp 2048w,'
+                  + item.url + '?x-oss-process=image/resize,w_3072/format,webp 3072w'"
+            > -->
+            <v-lazy-image style="width: 100%" :src-placeholder="item.url + '?x-oss-process=image/resize,w_256/quality,Q_90'" :src="item.url + '?x-oss-process=image/resize,h_1080'"  :srcset="item.url + '?x-oss-process=image/resize,w_256 256w,'
+            + item.url + '?x-oss-process=image/resize,w_512/quality,Q_90 512w,'
+            + item.url + '?x-oss-process=image/resize,w_1024/quality,Q_90 1024w,'
+            + item.url + '?x-oss-process=image/resize,w_2048/quality,Q_90 2048w,'
+            + item.url + '?x-oss-process=image/resize,w_3072/quality,Q_90 3072w'"/>
+          </picture>
         </div>
       </div>
+
+      
     </div>
 </template>
 
@@ -34,12 +45,26 @@ export default {
       ]
     }
   },
+  methods: {
+    flushPhotolist: function () {
+      var url = 'https://open.fredliang.cn/blog/photo'
+      if (this.$route.params.page !== undefined) {
+        url += '/' + this.$route.params.page
+      }
+      this.$http.get(url)
+        .then(response => (this.photoList = response.data.data))
+        .catch(error => {
+          console.log(error.response)
+        })
+    }
+  },
   mounted: function () {
-    this.$http.get('https://open.fredliang.cn/blog/photo')
-      .then(response => (this.photoList = response.data.data.reverse()))
-      .catch(error => {
-        console.log(error.response)
-      })
+    this.flushPhotolist()
+  },
+  watch: {
+    '$route': function (to, from) {
+      this.flushPhotolist()
+    }
   },
   computed: {
     sortedPhotoList: function () {

@@ -23,7 +23,7 @@ export default new Router({
     },
     {
       path: '/photo/:page',
-      name: 'Photo',
+      name: 'PhotoPage',
       component: Photo
     },
     {
