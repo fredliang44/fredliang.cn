@@ -4,24 +4,13 @@ import router from '@/router'
 import VueI18n from 'vue-i18n'
 import '@/registerServiceWorker'
 import axios from 'axios'
-import VueLazyload from 'vue-lazyload'
 import VueAnime from 'vue-animejs'
 import { VLazyImagePlugin } from 'v-lazy-image'
 import './registerServiceWorker'
 
 Vue.use(VLazyImagePlugin)
 Vue.use(VueAnime)
-Vue.use(VueLazyload, {
-  filter: {
-    progressive (listener, options) {
-      const isCDN = /storage.fredliang.cn/
-      if (isCDN.test(listener.src)) {
-        listener.el.setAttribute('lazy-progressive', 'true')
-        listener.loading = listener.src + '?x-oss-process=image/resize,h_200'
-      }
-    }
-  }
-})
+
 Vue.use(VueI18n)
 
 Vue.config.productionTip = false
