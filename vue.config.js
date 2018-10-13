@@ -13,10 +13,12 @@ module.exports = {
     appleMobileWebAppStatusBarStyle: 'black',
 
     // configure the workbox plugin
-    workboxPluginMode: 'GenerateSW',
+    workboxPluginMode: 'InjectManifest',
+    // workboxPluginMode: 'GenerateSW',
     workboxOptions: {
-      skipWaiting: true,
-      clientsClaim: true
+      swSrc: 'src/service-worker.js'
+      // skipWaiting: true,
+      // clientsClaim: true
     }
   },
   configureWebpack: config => {

@@ -32,7 +32,7 @@
         </div>
 
         <div>
-          <button :style="'opacity: ' + toTopOpacity" @click="scrollToTop" :class="{'none':notShowBackToTop, 'back-to-top': true}">
+          <button :style="'opacity: ' + toTopOpacity" @click="scrollToTop" class="back-to-top">
             <svg width="21px" height="24px" viewBox="0 0 21 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="index" transform="translate(-601.000000, -302.000000)" fill="#FFFFFF">
@@ -63,8 +63,7 @@ export default {
       photoList: [
       ],
       position: 0,
-      notShowBackToTop: true,
-      toTopOpacity: 1,
+      toTopOpacity: 0,
       hasPrevious: false,
       hasNext: false
     }
@@ -76,7 +75,6 @@ export default {
 
       if ((scrollTop <= clientHeight * 1.5)) {
         this.toTopOpacity = scrollTop / (clientHeight * 1.5)
-      } else {
       }
     },
     switchPage: function (action) {
