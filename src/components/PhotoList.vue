@@ -171,7 +171,7 @@ export default {
 }
 
 #photo-wrapper {
-  padding-top:3px; border-top:2px solid #000
+  padding-top:3px; border-top:2px solid #353432
 }
 h2 {
   font-size: 2em;

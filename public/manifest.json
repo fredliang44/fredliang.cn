@@ -1,6 +1,7 @@
 {
   "name": "Fred Liang",
   "short_name": "Fred Liang",
+  "gcm_sender_id": "103953800507",
   "icons": [
     {
       "src": "/img/icons/icon-72x72.png",

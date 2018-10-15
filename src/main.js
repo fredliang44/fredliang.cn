@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Index from '@/index.vue'
 import router from '@/router'
 import VueI18n from 'vue-i18n'
-import '@/registerServiceWorker'
 import axios from 'axios'
 import VueAnime from 'vue-animejs'
 import { VLazyImagePlugin } from 'v-lazy-image'
-import './registerServiceWorker'
-
+/* disable to migrate to index.vue
+ * import '@/registerServiceWorker'
+ */
 Vue.use(VLazyImagePlugin)
 Vue.use(VueAnime)
 
