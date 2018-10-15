@@ -113,7 +113,7 @@
 
       <div class="count-wrapper" :class="this.$i18n.locale">
         <button id="visitor-count" @click="flushVisitor">
-          <p id="count">0</p>
+          <p id="count">{{showCount}}</p>
         </button>
         <div style="display: inline-block">
           <p style="font-size: 1.5em;">{{ $t("visitors") }}</p>
@@ -129,6 +129,7 @@ export default {
   name: 'PersonalInfo',
   methods: {
     flushVisitor: function () {
+      var bindthis = this
       this.$http.get('https://open.fredliang.cn/blog/visitor')
         .then(response => {
           this.visitors = response.data.data
@@ -141,8 +142,7 @@ export default {
             round: 1,
             easing: 'linear',
             update: function () {
-              var el = document.querySelector('#count')
-              el.innerHTML = JSON.stringify(count.num)
+              bindthis.showCount = count.num
             }
           })
         })
@@ -154,7 +154,8 @@ export default {
   data () {
     return {
       iconSize: '36px',
-      visitors: 0
+      visitors: 0,
+      showCount: 233
     }
   },
   mounted: function () {

@@ -5,9 +5,8 @@ import VueI18n from 'vue-i18n'
 import axios from 'axios'
 import VueAnime from 'vue-animejs'
 import { VLazyImagePlugin } from 'v-lazy-image'
-/* disable to migrate to index.vue
- * import '@/registerServiceWorker'
- */
+import './plugins/element.js'
+
 Vue.use(VLazyImagePlugin)
 Vue.use(VueAnime)
 
