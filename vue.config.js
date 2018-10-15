@@ -1,6 +1,7 @@
 
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var AliyunossWebpackPlugin = require('aliyunoss-webpack-plugin')
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 var path = require('path')
 var oss = require('./oss')
 var manifestJSON = require('./public/manifest.json')
@@ -46,6 +47,17 @@ module.exports = {
             )
             return context
           }
+        }),
+        new UglifyJsPlugin({
+          uglifyOptions: {
+            compress: {
+              warnings: false,
+              drop_debugger: true,
+              drop_console: false
+            }
+          },
+          sourceMap: false,
+          parallel: true
         }),
         new AliyunossWebpackPlugin({
           buildPath: 'dist/**',

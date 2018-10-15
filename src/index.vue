@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="wrapper">
-      <div class="header">
-        <ul :class="this.$i18n.locale">
+      <div class="header" :class="this.$i18n.locale">
+        <ul>
           <li><router-link to="/" active-class="active" exact>{{ $t("navigation[0]") }}</router-link></li>
           <li><router-link to="/photo" active-class="active">{{ $t("navigation[1]") }}</router-link></li>
           <li><router-link to="/about" active-class="active">{{ $t("navigation[2]") }}</router-link></li>
@@ -11,11 +11,11 @@
               {{ $t("navigation[3]") }}
               <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="external-link" transform="translate(-623.000000, -465.000000)" fill="#919191">
-                          <g id="link-external" transform="translate(621.000000, 463.000000)">
-                              <rect id="Rectangle" opacity="0" x="0" y="0" width="16" height="16"></rect>
-                              <path d="M12,12 L4,12 L4,4 L8.66666667,4 L8.66666667,2.66666667 L3.33333333,2.66666667 C2.9651435,2.66666668 2.66666668,2.9651435 2.66666667,3.33333333 L2.66666667,12.6666667 C2.66666668,13.0348565 2.9651435,13.3333333 3.33333333,13.3333333 L12.6666667,13.3333333 C13.0348565,13.3333333 13.3333333,13.0348565 13.3333333,12.6666667 L13.3333333,7.33333333 L12,7.33333333 L12,12 Z" id="Path"></path>
-                              <polygon id="Path" points="11.6433333 3.414 7.52866667 7.52866667 8.47133333 8.47133333 12.586 4.35666667 13.9993333 5.77066667 14 2 10.2286667 2"></polygon>
+                      <g class="external-link" transform="translate(-623.000000, -465.000000)" fill="#919191">
+                          <g class="link-external" transform="translate(621.000000, 463.000000)">
+                              <rect  opacity="0" x="0" y="0" width="16" height="16"></rect>
+                              <path d="M12,12 L4,12 L4,4 L8.66666667,4 L8.66666667,2.66666667 L3.33333333,2.66666667 C2.9651435,2.66666668 2.66666668,2.9651435 2.66666667,3.33333333 L2.66666667,12.6666667 C2.66666668,13.0348565 2.9651435,13.3333333 3.33333333,13.3333333 L12.6666667,13.3333333 C13.0348565,13.3333333 13.3333333,13.0348565 13.3333333,12.6666667 L13.3333333,7.33333333 L12,7.33333333 L12,12 Z"></path>
+                              <polygon points="11.6433333 3.414 7.52866667 7.52866667 8.47133333 8.47133333 12.586 4.35666667 13.9993333 5.77066667 14 2 10.2286667 2"></polygon>
                           </g>
                       </g>
                   </g>
@@ -163,6 +163,7 @@ export default {
         },
         registered (registration) {
           if (registration.pushManager.getSubscription()) {
+            subscribe(registration)
             console.log(registration.pushManager.getSubscription())
           } else {
             subscribe(registration)
