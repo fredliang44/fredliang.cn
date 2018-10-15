@@ -18,5 +18,21 @@
     },
     "about": {
         "title":"关于"
+    },
+    "serviceworker":{
+        "notify":{
+            "denied":{
+                "title":"禁止消息推送",
+                "message":"禁止 Web Push 消息提醒"
+            },
+            "granted":{
+                "title":"消息订阅成功",
+                "message":"成功订阅 Web Push 消息提醒"
+            }
+        },
+        "refresh":{
+            "title":"网站有更新",
+            "message":["<a href="," style=\"color: #353432;\">内容更新，请<strong style=\"color: #006bff\">点击<strong>刷新</a>"]
+        }
     }
 }

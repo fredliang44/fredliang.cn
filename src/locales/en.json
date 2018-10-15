@@ -18,5 +18,21 @@
     },
     "about": {
         "title":"About Me"
+    },
+    "serviceworker":{
+        "notify":{
+            "denied":{
+                "title":"Access denied",
+                "message":"Web Push Access denied"
+            },
+            "granted":{
+                "title":"Success",
+                "message":"Success subscribed Web Push"
+            }
+        },
+        "refresh":{
+            "title":"Update available",
+            "message":["<a href="," style=\"color: #353432;\">Website updated, please <strong style=\"color: #006bff\">click<strong> to refresh</a>"]
+        }
     }
 }

@@ -50,8 +50,13 @@ export default {
 p > a {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-weight: 600;
+ 
+
+}
+
+div.part2-wrapper a {
+  color: white;
   text-decoration: underline !important;
-  color: white !important;
 }
 
 ul, li > p {

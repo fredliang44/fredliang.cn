@@ -48,17 +48,17 @@ module.exports = {
             return context
           }
         }),
-        new UglifyJsPlugin({
-          uglifyOptions: {
-            compress: {
-              warnings: false,
-              drop_debugger: true,
-              drop_console: false
-            }
-          },
-          sourceMap: false,
-          parallel: true
-        }),
+        // new UglifyJsPlugin({
+        //   uglifyOptions: {
+        //     compress: {
+        //       warnings: false,
+        //       drop_debugger: true,
+        //       drop_console: false
+        //     }
+        //   },
+        //   sourceMap: false,
+        //   parallel: true
+        // }),
         new AliyunossWebpackPlugin({
           buildPath: 'dist/**',
           region: oss.region,

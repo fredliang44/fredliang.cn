@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "css-aspect-ratio": "^1.0.5",
+    "element-ui": "^2.4.5",
     "import": "^0.0.6",
     "prerender-spa-plugin": "^3.4.0",
     "register-service-worker": "^1.0.0",
@@ -26,6 +27,9 @@
     "@vue/cli-plugin-pwa": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
     "aliyunoss-webpack-plugin": "^0.2.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-component": "^1.1.1",
     "eslint": "^5.6.1",
     "eslint-config-prettier": "^3.1.0",
     "eslint-config-standard": "^12.0.0",
@@ -39,6 +43,7 @@
     "prettier-eslint-cli": "^4.7.1",
     "v-lazy-image": "^1.2.2",
     "vue-animejs": "^1.0.1",
+    "vue-cli-plugin-element": "^1.0.0",
     "vue-lazyload": "^1.2.6",
     "vue-template-compiler": "^2.5.17",
     "web-push": "^3.3.3"
