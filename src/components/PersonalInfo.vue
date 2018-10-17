@@ -155,7 +155,7 @@ export default {
     return {
       iconSize: '36px',
       visitors: 0,
-      showCount: 233
+      showCount: 0
     }
   },
   mounted: function () {
