@@ -1,28 +1,35 @@
-# personal-website
+# fredliang.cn
 
-Source code of <fredliang.cn>
+> Source Code of [www.fredliang.cn](https://www.fredliang.cn)
 
-## Project setup
+## 1. Project setup
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
+### 1.1 Create oss.js in root path with alibabacloud oss config
+
+``` javascript
+module.exports = {
+  accessKeyId: '',
+  accessKeySecret: '',
+  region: '',
+  bucket: ''
+}
 ```
 
-### Compiles and minifies for production
+### 1.2 Compiles and hot-reloads for development
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
+yarn dev
 ```
 
-### Lints and fixes files
+### 1.3 Compiles and minifies for production then upload `dist` folder to oss
 ```
-yarn run lint
+yarn build
+```
+
+### 1.4 Lints and fixes files
+```
+yarn lint
 ```
