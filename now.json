@@ -13,5 +13,6 @@
     "alias": "lzb.im",
     "files": [
       "dist"
-    ]
+    ],
+    "version":1
   }

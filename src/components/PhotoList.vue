@@ -15,14 +15,6 @@
             </div>
           </div>
           <div :style="'height: 0;'+' background-color: #' + item.averageHue  +'; padding-bottom: '+item.height/item.width * 100 +'%;'"  >
-             <!-- <source
-                type="image/webp"
-                :srcset="item.url + '?x-oss-process=image/resize,w_256/format,webp 256w,'
-                  + item.url + '?x-oss-process=image/resize,w_512/format,webp 512w,'
-                  + item.url + '?x-oss-process=image/resize,w_1024/format,webp 1024w,'
-                  + item.url + '?x-oss-process=image/resize,w_2048/format,webp 2048w,'
-                  + item.url + '?x-oss-process=image/resize,w_3072/format,webp 3072w'"
-            > -->
             <v-lazy-image 
             class="img-zoomable"
             style="width:100%"
@@ -192,7 +184,7 @@ h2 {
   margin-bottom: 4em;
 }
 .top {
-  padding: 4em;
+  padding: 0 4em 4em 4em;
 }
 button:disabled {
   opacity: 0.4;

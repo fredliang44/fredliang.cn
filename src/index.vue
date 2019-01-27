@@ -5,10 +5,11 @@
         <ul>
           <li><router-link to="/" active-class="active" exact>{{ $t("navigation[0]") }}</router-link></li>
           <li><router-link to="/photo" active-class="active">{{ $t("navigation[1]") }}</router-link></li>
-          <li><router-link to="/about" active-class="active">{{ $t("navigation[2]") }}</router-link></li>
+          <li><router-link to="/story" active-class="active">{{ $t("navigation[2]") }}</router-link></li>
+          <li><router-link to="/about" active-class="active">{{ $t("navigation[3]") }}</router-link></li>
           <li>
             <a href="https://blog.fredliang.cn" target="_blank" rel="noopener">
-              {{ $t("navigation[3]") }}
+              {{ $t("navigation[4]") }}
               <svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g class="external-link" transform="translate(-623.000000, -465.000000)" fill="#919191">
@@ -39,7 +40,6 @@
 </template>
 
 <script>
-
 import Home from '@/pages/Home.vue'
 import Footer from '@/components/Footer.vue'
 import ServiceWorker from '@/components/ServiceWorker.vue'
@@ -92,7 +92,6 @@ export default {
 </script>
 
 <style>
-
 @font-face {
     font-family: "FZBWKSJW";
     src: url("./assets/font/FZBWKSJW.eot"); /* IE9 */
@@ -104,6 +103,10 @@ export default {
     url("./assets/font/FZBWKSJW.svg#FZBWKSJW") format("svg"); /* iOS 4.1- */
     font-style: normal;
     font-weight: normal;
+}
+
+#router {
+  padding-top: 4em;
 }
 
 .header > ul > li > a:hover {

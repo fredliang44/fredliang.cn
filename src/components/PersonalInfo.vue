@@ -166,7 +166,7 @@ export default {
 
 <style>
 #name {
-    height: 1.5em;
+  height: 1.5em;
 }
 .icon:hover {
   width: 40px;
@@ -175,7 +175,7 @@ export default {
   transition: all 0.2s;
 }
 .part1 {
-  margin: 4em;
+  margin: 0 4em 4em 4em;
 }
 .position > li {
   max-width: 12em;

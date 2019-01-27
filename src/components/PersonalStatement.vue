@@ -11,9 +11,6 @@ export default {
 </script>
 
 <style>
-.top {
-  padding: 4em;
-}
 h1, ul {
   text-align: left;
 }
