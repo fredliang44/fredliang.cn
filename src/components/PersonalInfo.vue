@@ -132,10 +132,10 @@ export default {
       var bindthis = this
       this.$http.get('https://open.fredliang.cn/blog/visitor')
         .then(response => {
-          this.visitors = response.data.data
           var count = {
-            num: 0
+            num: this.visitors
           }
+          this.visitors = response.data.data
           this.$anime({
             targets: count,
             num: this.visitors,

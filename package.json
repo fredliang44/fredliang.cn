@@ -17,9 +17,11 @@
     "prerender-spa-plugin": "^3.4.0",
     "register-service-worker": "^1.0.0",
     "sass-loader": "^7.1.0",
+    "uglifyjs-webpack-plugin": "^2.1.1",
     "vue": "^2.5.17",
     "vue-i18n": "^8.1.0",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.5",
@@ -28,6 +30,7 @@
     "@vue/cli-service": "^3.0.5",
     "aliyunoss-webpack-plugin": "^0.2.1",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-component": "^1.1.1",
     "eslint": "^5.6.1",

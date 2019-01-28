@@ -9,4 +9,5 @@ Vue.use(Button)
 Vue.use(Card)
 Vue.use(Row)
 Vue.use(Col)
+
 Vue.prototype.$notify = Notification

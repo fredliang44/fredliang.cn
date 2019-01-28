@@ -1,7 +1,7 @@
 {
     "name":"Fred Liang",
     "navigation":["Home", "Photo", "Story", "About", "Blog"],
-    "visitors":"visitors",
+    "visitors":"visits",
     "position":["Product Manager","Visual Designer","Film Producer","Web Developer"],
     "whoAmI": {
         "title":"Who Am I",
@@ -37,6 +37,9 @@
             "title":"Update available",
             "message":["<a href="," style=\"color: #353432;\">Website updated, please <strong style=\"color: #006bff\">click<strong> to refresh</a>"]
         }
+    },
+    "message":{
+        "workingOn":"I am working on this part, please check back later~"
     },
     "beian":"京ICP备16033945号-2"
 }

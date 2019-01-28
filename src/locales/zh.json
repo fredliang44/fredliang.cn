@@ -1,7 +1,7 @@
 {
     "name":"梁志博",
     "navigation":["首页", "摄影", "故事板", "关于", "博客"],
-    "visitors":"访客",
+    "visitors":"次访问",
     "position":["产品经理","视觉设计","视频制作","Web 开发者"],
     "whoAmI": {
         "title":"自述",
@@ -37,6 +37,9 @@
             "title":"网站有更新",
             "message":["<a href="," style=\"color: #353432;\">内容更新，请<strong style=\"color: #006bff\">点击<strong>刷新</a>"]
         }
+    },
+    "message":{
+        "workingOn":"该部分正在尽力编写中，请晚些时候再来查看~"
     },
     "beian":"京ICP备16033945号-2"
 }
