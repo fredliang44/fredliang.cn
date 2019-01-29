@@ -164,6 +164,61 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width:221px) and (max-width:799px){
+  .part1 {
+    margin: 0 2em 2em 1.8em;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  li {
+    font-size: 0.8em;
+  }
+
+  .position {
+    margin: 1.6em 0;
+  }
+
+  #visitor-count {
+    width: 5.6em;
+    height: 3.2em;
+  }
+
+  #visitor-count > p{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:799px){
+  .part1 {
+    margin: 0 4em 4em 4em;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  li {
+    font-size: 0.7em;
+  }
+
+  .position {
+    margin: 1em 0;
+  }
+
+  #visitor-count {
+    width: 8em;
+    height: 4em;
+  }
+
+  #visitor-count > p{
+    font-size: 1.6em;
+    
+  }
+}
+
 #name {
   height: 1.5em;
 }
@@ -173,9 +228,7 @@ export default {
   margin: -2px;
   transition: all 0.2s;
 }
-.part1 {
-  margin: 0 4em 4em 4em;
-}
+
 .position > li {
   max-width: 12em;
   width: auto;
@@ -205,16 +258,13 @@ export default {
 #visitor-count {
   margin: 0;
   padding: 0;
+  margin-right: 1.2rem;
   display: inline-block;
-  width: 8em;
-  height: 4em;
   background-color: #353432;
-  margin-right: 2em;
 }
 #visitor-count > p{
+
   color: white;
-  font-size: 1.6em;
-  line-height: 2.4em;
   vertical-align:middle;
   margin: 0;
   text-align:center;
@@ -222,22 +272,18 @@ export default {
 #statement {
   color: white;
 }
-.position {
-    margin: 1em 0;
-}
+
 h1, ul {
   text-align: left;
 }
 h1 {
   margin: 0;
-  font-size: 4em;
 }
 li {
   font-weight: 500;
   color: gray;
   margin-left: 0 !important;
   margin-right: 0.9em !important;
-  font-size: 0.7em;
   padding: 0.3em 0;
 }
 </style>

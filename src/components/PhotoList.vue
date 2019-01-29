@@ -43,8 +43,8 @@
         </div>
 
         <div class="switch-page">
-          <button id="previous" @click="switchPage(0)" :class="this.$i18n.locale" class="switcher" :disabled="!(startPhotoID >= pageSize)">previous</button>
-          <button id="next" @click="switchPage(1)" :class="this.$i18n.locale" class="switcher"  :disabled="!(startPhotoID < count-pageSize)">next</button>
+          <button id="previous" @click="switchPage(0)" :class="this.$i18n.locale" class="switcher" :disabled="!(startPhotoID >= pageSize)">Previous</button>
+          <button id="next" @click="switchPage(1)" :class="this.$i18n.locale" class="switcher"  :disabled="!(startPhotoID < count-pageSize)">Next</button>
         </div>
       </div>
 
@@ -104,7 +104,7 @@ export default {
       }
     },
     flushPhotoList: function () {
-      this.listInPage = []
+      // this.listInPage = []
       var currentPage = 0
       currentPage = Number(this.$route.params.page)
       if (!currentPage > 1 || isNaN(currentPage)) {
@@ -157,6 +157,51 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width:221px) and (max-width:799px){
+  .switcher {
+    font-size: 1em;
+    border: 1.6px solid #353432;
+    padding: 0.4em 0.8em;
+  }
+
+  .paragraph {
+    height: 10em;
+    font-size: 1rem;
+    margin-bottom: 2em;
+  }
+
+  .time > p {
+    margin-top: 0;
+    font-size: 1em;
+  }
+
+  h2 {
+    margin-bottom: 0.6rem;
+    font-size: 1.6em;
+  }
+
+  .switch-page > button {
+    display: block;
+  }
+}
+@media screen and (min-width:799px){
+  .switcher {
+    font-size: 1.2em;
+    border: 2px solid #353432;
+    padding: 0.5em 1em;
+  }
+  .paragraph {
+    height: 10em;
+    font-size: 1.2em;
+    margin-bottom: 4em;
+  }
+  .time > p {
+      font-size: 1.6em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
 .none {
   display: none;
 }
@@ -175,30 +220,15 @@ export default {
   justify-content: space-between;
  
 }
-.switcher {
-  font-size: 1.2em;
-  border: 2px solid #353432;
-  padding: 0.5em 1em;
-}
 
 #photo-wrapper {
   padding-top:3px; border-top:2px solid #353432
 }
-h2 {
-  font-size: 2em;
-}
-.time > p {
-  font-size: 1.6em;
-}
+
 .paragraph {
-  height: 10em;
   text-align: left;
-  font-size: 1.2em;
-  margin-bottom: 4em;
 }
-.top {
-  padding: 0 4em 4em 4em;
-}
+
 button:disabled {
   opacity: 0.4;
 }
@@ -213,6 +243,5 @@ h1, ul {
 h1 {
   color: #353432;
   margin: 0;
-  font-size: 4em;
 }
 </style>

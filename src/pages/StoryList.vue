@@ -18,8 +18,5 @@ export default {
 </script>
 
 <style>
-.top {
-  padding: 0 4em 0em 4em;
-}
 </style>
 

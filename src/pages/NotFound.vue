@@ -228,17 +228,10 @@ export default {
 </script>
 
 <style>
-.top {
-  padding: 4em 4em 0em 4em;
-}
 h1, ul {
   text-align: left;
 }
-h1 {
-  color: #353432;
-  margin: 0;
-  font-size: 4em;
-}
+
 #monkey_404 {
   width: 800px;
   height: 480px;

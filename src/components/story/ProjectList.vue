@@ -1,8 +1,8 @@
 <template>
   <div class="top">
-    <el-row :gutter="20">
+    <el-row :gutter="24">
       <div class="project-list" v-for="project in projects"  :key="project.id">
-        <el-col :span="8" style="padding:0 4em 4em 0">
+        <el-col :span="span" style="padding:0 4em 4em 0">
           <div class="grid-content bg-purple card">
             <label @click="switchPage(project.url)">
               <div style="position:relative">
@@ -30,17 +30,21 @@ export default {
         window.open(url)
       } else {
         this.$notify({
-          title: 'Sorry！',
+          title: 'Sorry!',
           message: this.$t('message.workingOn'),
           type: 'info',
           offset: 20
         })
       }
+    },
+    isMobile () {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag
     }
   },
-
   data () {
     return {
+      span: 0,
       projects: [
         {
           id: 1,
@@ -60,10 +64,27 @@ export default {
         }
       ].reverse()
     }
+  },
+  mounted () {
+    if (this.isMobile()) {
+      this.span = 24
+    } else {
+      this.span = 8
+    }
   }
 }
 </script>
 <style>
+@media screen and (min-width:221px) and (max-width:799px){
+  .el-row {
+    transform: translateX(12px)
+  }
+
+  .el-col {
+    padding: 0px 2em 3em 0px  !important;
+  }
+}
+
 .card {
   box-shadow: 0px 30px 60px rgba(0,0,0,0.14);
   transition-duration: 0.6s;

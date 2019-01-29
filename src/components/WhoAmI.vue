@@ -47,11 +47,31 @@ export default {
 
 
 <style>
+@media screen and (min-width:221px) and (max-width:799px){
+  .part2 {
+    min-height: 10em;
+    padding: 2em 2em;
+  }
+
+  .statement > p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:799px){
+  .part2 {
+    min-height: 10em;
+    padding: 6em 4em;
+  }
+
+  .statement > p {
+    font-size: 1.2em;
+  }
+}
+
 p > a {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-weight: 600;
- 
-
 }
 
 div.part2-wrapper a {
@@ -64,7 +84,6 @@ ul, li > p {
 }
 .statement > p {
   color: white;
-  font-size: 1.2em;
   text-align: left;
 }
 .statement > ul > li > p {
@@ -79,10 +98,7 @@ ul, li > p {
 .part2-wrapper {
   background-color: #353432;
 }
-.part2 {
-  min-height: 10em;
-  padding: 6em 4em;
-}
+
 #statement-title {
   color: white;
 }

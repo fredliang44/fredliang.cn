@@ -105,9 +105,73 @@ export default {
     font-weight: normal;
 }
 
-#router {
-  padding-top: 4em;
-}
+@media screen and (min-width:221px) and (max-width:799px){
+  .header {
+    padding: 2em 0em 0 2.4em;
+    font-size: 0.7em;
+  }
+
+  .header > ul > li:last-of-type {
+    width: 4em;
+  }
+  
+  #lang-switch > p{
+    margin: 0 8px;
+    font-size: 0.7em;
+  }
+
+  .top {
+    padding: 0 2em 2em 2em;
+  }
+
+  ul {
+    font-size: 1.26rem;
+  }
+
+  button {
+    display: none;
+    padding: 3px 0;
+  }
+
+  #router {
+    padding-top: 2em;
+  }
+} 
+
+@media screen and (min-width:799px){
+  .header {
+    padding: 4em 5em 0 5em;
+    font-size: 0.84em;
+  }
+
+  .header > ul > li {
+    width: 4em;
+  }
+
+  #lang-switch > p{
+    margin: 0 12px;
+    font-size: 15px;
+  }
+
+  .top {
+    padding: 0 4em 4em 4em;
+  }
+  
+  ul {
+    font-size: 2em;
+  }
+
+  button {
+     padding: 6px 0;
+  }
+
+  #router {
+    padding-top: 4em;
+  }
+} 
+
+
+
 
 .header > ul > li > a:hover {
   color: #353432;
@@ -130,22 +194,15 @@ export default {
 #lang-switch {
   transform: translateY(-4px);
 }
-#lang-switch > p{
-  margin: 0 12px;
-  font-size: 15px;
-}
+
 #switch-wrapper {
   float: right;
 }
 .header {
   height: 2.4em;
-  padding: 4em 5em 0 5em;
-  font-size: 0.84em;
   text-align: left;
 }
-.header > ul > li {
-  width: 4em;
-}
+
 .active {
   color: #353432;
   padding-bottom:3px; border-bottom:2px solid #000;
@@ -162,15 +219,12 @@ button:hover {
   color: white;
 }
 button {
-  padding: 0;
   border: 1px solid #353432;
-  padding: 6px 0;
   background-color: white;
   outline:none;
   transition: all 0.6s, border 0s;
 }
 ul {
-  font-size: 2em;
   list-style-type: none;
   padding: 0;
   margin: 0;

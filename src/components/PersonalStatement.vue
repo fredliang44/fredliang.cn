@@ -17,6 +17,5 @@ h1, ul {
 h1 {
   color: #353432;
   margin: 0;
-  font-size: 4em;
 }
 </style>

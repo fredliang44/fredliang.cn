@@ -33,12 +33,13 @@ module.exports = {
           // Absolute path to compiled SPA
           staticDir: path.resolve(__dirname, './dist'),
           // List of routes to prerender
-          routes: ['/', '/photo', '/about'],
+          routes: ['/', '/photo', '/story', '/about'],
           // Options
           postProcess (context) {
             let titles = {
               '/': 'Fred Liang',
               '/photo': 'Photo',
+              '/story': 'Story',
               '/about': 'About Me'
             }
             context.html = context.html.replace(

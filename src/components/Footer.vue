@@ -17,9 +17,26 @@ export default {
 
 
 <style scoped>
-#context {
-  height: 4em;
+@media screen and (min-width:221px) and (max-width:799px){
+  .footer {
+    height: 6rem;
+  }
+
+  #context {
+    height: 3em;
+  }
 }
+
+@media screen and (min-width:799px){
+  .footer {
+    height: 8em;
+  }
+
+  #context {
+    height: 4em;
+  }
+}
+
 
 a {
   font-weight: 400;
@@ -30,7 +47,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 8em;
 }
 p {
   margin: 0;
