@@ -1,17 +1,21 @@
-import * as api from '../api'
+import axios from 'axios'
 
-export const getAllMessages = ({ commit }) => {
-  api.getAllMessages(messages => {
-    commit('receiveAll', messages)
-  })
+export const updateVisitors = async ({ commit }) => {
+  await axios.get('https://open.fredliang.cn/blog/visitor')
+    .then(response => {
+      commit('setVisitors', response.data.data)
+    })
+    .catch(error => {
+      console.log(error.response)
+    })
 }
 
-export const sendMessage = ({ commit }, payload) => {
-  api.createMessage(payload, message => {
-    commit('receiveMessage', message)
-  })
-}
-
-export const switchThread = ({ commit }, payload) => {
-  commit('switchThread', payload)
+export const updatePhotoList = ({ commit }) => {
+  axios.get('https://open.fredliang.cn/blog/photo/0')
+    .then(response => {
+      commit('setPhotoList', response.data.data)
+    })
+    .catch(error => {
+      console.log(error.response)
+    })
 }

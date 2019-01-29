@@ -3,13 +3,13 @@ import Vuex from 'vuex'
 import * as getters from './getters'
 import * as actions from './actions'
 import mutations from './mutations'
-import createLogger from '../../../src/plugins/logger'
+import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
 
 const state = {
-  currentThreadID: null,
-  threads: {
+  visitors: 0,
+  photoList: [
     /*
     id: {
       id,
@@ -18,20 +18,7 @@ const state = {
       lastMessage
     }
     */
-  },
-  messages: {
-    /*
-    id: {
-      id,
-      threadId,
-      threadName,
-      authorName,
-      text,
-      timestamp,
-      isRead
-    }
-    */
-  }
+  ]
 }
 
 export default new Vuex.Store({
@@ -39,7 +26,5 @@ export default new Vuex.Store({
   getters,
   actions,
   mutations,
-  plugins: process.env.NODE_ENV !== 'production'
-    ? [createLogger()]
-    : []
+  plugins: [createPersistedState()]
 })

@@ -217,11 +217,9 @@
 </template>
 
 <script>
-
 export default {
   name: 'NotFound',
   mounted: function () {
-    console.log(this.$route.path.substr(0, 10))
     if (this.$route.path.substr(0, 10) === '/index.php') {
       window.location.href = 'https://oldblog.fredliang.cn' + this.$route.path
     }

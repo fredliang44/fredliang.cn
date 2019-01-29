@@ -124,43 +124,42 @@
 </template>
 
 <script>
-
+import { mapState } from 'vuex'
 export default {
   name: 'PersonalInfo',
   methods: {
     flushVisitor: function () {
       var bindthis = this
-      this.$http.get('https://open.fredliang.cn/blog/visitor')
-        .then(response => {
-          var count = {
-            num: this.visitors
-          }
-          this.visitors = response.data.data
-          this.$anime({
-            targets: count,
-            num: this.visitors,
-            round: 1,
-            easing: 'linear',
-            update: function () {
-              bindthis.showCount = count.num
-            }
-          })
-        })
-        .catch(error => {
-          console.log(error.response)
-        })
+      var count = {
+        num: 0
+      }
+      this.$anime({
+        targets: count,
+        num: this.visitors,
+        round: 1,
+        easing: 'linear',
+        update: function () {
+          bindthis.showCount = count.num
+        }
+      })
     }
   },
   data () {
     return {
       iconSize: '36px',
-      visitors: 0,
       showCount: 0
     }
   },
   mounted: function () {
-    this.flushVisitor()
-  }
+    this.$store.dispatch('updatePhotoList')
+    this.$store.dispatch('updateVisitors')
+      .then(() => {
+        this.flushVisitor()
+      })
+  },
+  computed: mapState([
+    'visitors'
+  ])
 }
 </script>
 

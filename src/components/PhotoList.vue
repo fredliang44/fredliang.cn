@@ -5,7 +5,7 @@
       </div>
 
       <div id="photo-wrapper">
-        <div v-for="item in photoList" :key="item.id" class="photo-block">
+        <div v-for="item in listInPage" :key="item.id" class="photo-block">
           <div class="photo-info">
             <div class="location">
               <h2>{{ item.location }}</h2>
@@ -19,13 +19,11 @@
             class="img-zoomable"
             style="width:100%"
             :alt="item.title" 
-            :src-placeholder="item.url + '?x-oss-process=image/resize,w_256/quality,Q_50/blur,r_3,s_2'" 
+            :src-placeholder="item.url + '?x-oss-process=image/resize,w_512/quality,Q_50/blur,r_3,s_2'" 
             :src="item.url + '?x-oss-process=image/resize,h_1080'"  
-            :srcset="item.url + '?x-oss-process=image/resize,w_256 256w,'
-              + item.url + '?x-oss-process=image/resize,w_512/quality,Q_80 512w,'
+            :srcset="item.url + '?x-oss-process=image/resize,w_512/quality,Q_80 512w,'
               + item.url + '?x-oss-process=image/resize,w_1024/quality,Q_80 1024w,'
-              + item.url + '?x-oss-process=image/resize,w_2048/quality,Q_80 2048w,'
-              + item.url + '?x-oss-process=image/resize,w_3072/quality,Q_80 3072w'"/>
+              + item.url + '?x-oss-process=image/resize,w_2048/quality,Q_80 2048w,'"/>
           </div>
         </div>
 
@@ -45,8 +43,8 @@
         </div>
 
         <div class="switch-page">
-          <button id="previous" @click="switchPage(0)" :class="this.$i18n.locale" class="switcher" :disabled="!hasPrevious">previous</button>
-          <button id="next" @click="switchPage(1)" :class="this.$i18n.locale" class="switcher"  :disabled="!hasNext">next</button>
+          <button id="previous" @click="switchPage(0)" :class="this.$i18n.locale" class="switcher" :disabled="!(startPhotoID >= pageSize)">previous</button>
+          <button id="next" @click="switchPage(1)" :class="this.$i18n.locale" class="switcher"  :disabled="!(startPhotoID < count-pageSize)">next</button>
         </div>
       </div>
 
@@ -54,12 +52,17 @@
 </template>
 
 <script>
+import VLazyImage from 'v-lazy-image'
+import { mapState } from 'vuex'
 export default {
   name: 'PhotoList',
   data () {
     return {
-      photoList: [
-      ],
+      listInPage: [],
+      count: 0,
+      startPhotoID: 0,
+      endPhotoID: 0,
+      pageSize: 10,
       position: 0,
       toTopOpacity: 0,
       hasPrevious: false,
@@ -100,20 +103,23 @@ export default {
           console.log('error', action)
       }
     },
-    flushPhotolist: function () {
-      var url = 'https://open.fredliang.cn/blog/photo'
-      if (this.$route.params.page !== undefined) {
-        url += '/' + this.$route.params.page
+    flushPhotoList: function () {
+      this.listInPage = []
+      var currentPage = 0
+      currentPage = Number(this.$route.params.page)
+      if (!currentPage > 1 || isNaN(currentPage)) {
+        currentPage = 1
       }
-      this.$http.get(url)
-        .then(response => {
-          this.photoList = response.data.data.list
-          this.hasPrevious = response.data.data.previous
-          this.hasNext = response.data.data.next
-        })
-        .catch(error => {
-          console.log(error.response)
-        })
+
+      this.count = this.photoList.length
+      this.startPhotoID = (currentPage - 1) * this.pageSize
+      if (this.count >= this.startPhotoID + this.pageSize) {
+        this.endPhotoID = this.startPhotoID + this.pageSize
+      } else if (this.count >= this.startPhotoID) {
+        this.endPhotoID = this.count
+      }
+
+      this.listInPage = this.photoList.slice(this.startPhotoID, this.endPhotoID)
     },
     scrollToTop: function () {
       var current = {
@@ -133,12 +139,19 @@ export default {
   },
   mounted: function () {
     window.addEventListener('scroll', this.handleScroll)
-    this.flushPhotolist()
+    this.$store.dispatch('updatePhotoList')
+    this.flushPhotoList()
   },
   watch: {
     '$route': function (to, from) {
-      this.flushPhotolist()
+      this.flushPhotoList()
     }
+  },
+  computed: mapState([
+    'photoList'
+  ]),
+  components: {
+    VLazyImage
   }
 }
 </script>
