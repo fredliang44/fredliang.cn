@@ -60,7 +60,7 @@ export default {
         {
           id: 3,
           imgURL: 'https://storage.fredliang.cn/web/2019-01-27-UnionSQL.jpg',
-          url: 'https://mp.weixin.qq.com/s/JPK_wHHaI6KPbw3hP34H5g'
+          url: '/story/unionsql'
         }
       ].reverse()
     }

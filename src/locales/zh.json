@@ -1,45 +1,94 @@
 {
-    "name":"梁志博",
-    "navigation":["首页", "摄影", "故事板", "关于", "博客"],
-    "visitors":"次访问",
-    "position":["产品经理","视觉设计","视频制作","Web 开发者"],
-    "whoAmI": {
-        "title":"自述",
-        "highSchool":"自 2013 年起，我开始进行视频制作，途中了解到视频策划、 拍摄、剪辑、调色、视效制作等流程。在学校电视台期间力求为同学呈现视觉惊艳，内在隽永的作品。",
-        "college":"进入大学之后, 我加入了 <a target=\"_blank\" rel=\"noopener\" href=\"//hustunique.com\">联创团队</a>。 我的工作也逐渐从视觉设计转型到了产品经理，在这个过程中尝试了解、构建融合体验设计、技术、商业化的产品。",
-        "showWorksDescription":"很高兴能够有一些产出:",
-        "workList":["国内高校黑客马拉松","黑客马拉松管理系统","呈现联创团队成员关系的工具"],
-        "besides":"同时，我也在维护一些基础设施供他人使用：",
-        "infrastructuresDescription":["Docker 容器管理平台","数据智能平台", "联创团队开放平台"]
-    },
-    "photo": {
-        "title": "摄影",
-        "description":"<p>夜深，风狠，可穿膛。</p><p>月色，如玉，透心凉。持架四顾，上山下谷，挪步，再挪步，尖入土。</p><p>立定望，路无霜，灯火阑珊有常，烟波十里无恙。</p><p>长曝光，车似浪，灯似芒，好景也可长。</p><p>行人奔忙，无暇思量，夜色三藩，有光传唱。</p>"
-    },
-    "story":{
-        "title": "故事板"
-    },
-    "about": {
-        "title":"关于"
-    },
-    "serviceworker":{
-        "notify":{
-            "denied":{
-                "title":"禁止消息推送",
-                "message":"禁止 Web Push 消息提醒"
-            },
-            "granted":{
-                "title":"消息订阅成功",
-                "message":"成功订阅 Web Push 消息提醒"
-            }
-        },
-        "refresh":{
-            "title":"网站有更新",
-            "message":["<a href="," style=\"color: #353432;\">内容更新，请<strong style=\"color: #006bff\">点击<strong>刷新</a>"]
-        }
-    },
-    "message":{
-        "workingOn":"该部分正在尽力编写中，请晚些时候再来查看~"
-    },
-    "beian":"京ICP备16033945号-2"
+	"name": "梁志博",
+	"navigation": [
+		"首页",
+		"摄影",
+		"故事板",
+		"关于",
+		"博客"
+	],
+	"visitors": "次访问",
+	"position": [
+		"产品经理",
+		"视觉设计",
+		"视频制作",
+		"Web 开发者"
+	],
+	"whoAmI": {
+		"title": "自述",
+		"highSchool": "自 2013 年起，我开始进行视频制作，途中了解到视频策划、 拍摄、剪辑、调色、视效制作等流程。在学校电视台期间力求为同学呈现视觉惊艳，内在隽永的作品。",
+		"college": "进入大学之后, 我加入了 <a target=\"_blank\" rel=\"noopener\" href=\"//hustunique.com\">联创团队</a>。 我的工作也逐渐从视觉设计转型到了产品经理，在这个过程中尝试了解、构建融合体验设计、技术、商业化的产品。",
+		"showWorksDescription": "很高兴能够有一些产出:",
+		"workList": [
+			"国内高校黑客马拉松",
+			"黑客马拉松管理系统",
+			"呈现联创团队成员关系的工具"
+		],
+		"besides": "同时，我也在维护一些基础设施供他人使用：",
+		"infrastructuresDescription": [
+			"Docker 容器管理平台",
+			"数据智能平台",
+			"联创团队开放平台"
+		]
+	},
+	"photo": {
+		"title": "摄影",
+		"description": "<p>夜深，风狠，可穿膛。</p><p>月色，如玉，透心凉。持架四顾，上山下谷，挪步，再挪步，尖入土。</p><p>立定望，路无霜，灯火阑珊有常，烟波十里无恙。</p><p>长曝光，车似浪，灯似芒，好景也可长。</p><p>行人奔忙，无暇思量，夜色三藩，有光传唱。</p>"
+	},
+	"story": {
+		"title": "故事板",
+		"list": [
+            {},
+            {},
+			{
+				"block": [
+					{
+                        "id":1,
+						"type": "banner",
+						"src": "/img/banner/unionsql-banner.svg"
+					},
+					{
+                        "id":2,
+						"type": "content",
+						"title": "简介",
+						"content": "<p>UnionSQL 为小米产品、运营、研发、销售等人员提供了一个统一的数据查询服务,赋能公司核心业务<br>其可以在交互式查询的场景下替换现有作业调度平台，提供更加快捷方便的数据查询入口<br>实习期间主要负责交互式查询部分</p>",
+						"backgroundColor": "grey"
+					},
+					{
+                        "id":3,
+						"type": "content",
+						"title": "公开资料参考",
+						"content": "<a href=\"https://mp.weixin.qq.com/s/JPK_wHHaI6KPbw3hP34H5g\">小米大数据：借助Apache Kylin打造高效、易用的一站式OLAP解决方案</a><br><a href=\"https://kyligence.io/zh/2018/12/03/xiaomi-use-apache-kylin-to-build-an-efficient-and-easy-to-use-one-step-olap/\">【用户案例】小米大数据：借助Apache Kylin打造高效、易用的一站式OLAP解决方案</a>",
+						"backgroundColor": "white"
+					}
+				]
+			}
+		]
+	},
+	"about": {
+		"title": "关于"
+	},
+	"serviceworker": {
+		"notify": {
+			"denied": {
+				"title": "禁止消息推送",
+				"message": "禁止 Web Push 消息提醒"
+			},
+			"granted": {
+				"title": "消息订阅成功",
+				"message": "成功订阅 Web Push 消息提醒"
+			}
+		},
+		"refresh": {
+			"title": "网站有更新",
+			"message": [
+				"<a href=",
+				" style=\"color: #353432;\">内容更新，请<strong style=\"color: #006bff\">点击<strong>刷新</a>"
+			]
+		}
+	},
+	"message": {
+		"workingOn": "该部分正在尽力编写中，请晚些时候再来查看~"
+	},
+	"beian": "京ICP备16033945号-2"
 }

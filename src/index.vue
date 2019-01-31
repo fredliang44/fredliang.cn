@@ -154,7 +154,7 @@ export default {
   }
 
   .top {
-    padding: 0 4em 4em 4em;
+    padding: 0 4em 2em 4em;
   }
   
   ul {

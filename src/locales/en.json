@@ -1,45 +1,94 @@
 {
-    "name":"Fred Liang",
-    "navigation":["Home", "Photo", "Story", "About", "Blog"],
-    "visitors":"visits",
-    "position":["Product Manager","Visual Designer","Film Producer","Web Developer"],
-    "whoAmI": {
-        "title":"Who Am I",
-        "highSchool":"Since 2013, I started working on Video Production. Being Obsessed with providing gorgeous video effects and significant thoughts to my schoolmates.",
-        "college":"During my college life, I joined <a target=\"_blank\" rel=\"noopener\" href=\"//hustunique.com\">Unique Studio</a>. My work has changed from Visual Design to Product Management. Dozens of technologies and approaches had been tried to enrich my horizons.",
-        "showWorksDescription":"With my pleasure, here are some of my works:",
-        "workList":["A Domestic Hackathon","A Hackathon Management System","A Tool Present Relationships in Unique Studio"],
-        "besides":"Besides that, I have been maintaining some infrastructure for my collaborators.",
-        "infrastructuresDescription":["A Docker Container Manage System"," A Business Intelligence System", "Open platform of Unique Studio"]
-    }, 
-    "story":{
-        "title": "StoryBoard"
-    },
-    "photo": {
-        "title": "Photo",
-        "description":"<p>To see the world, things dangerous to come to,</p><p>to see behind walls,  to draw closer,</p><p>to find each other,  and to feel.</p><p>That is the purpose of life.</p>"
-    },
-    "about": {
-        "title":"About Me"
-    },
-    "serviceworker":{
-        "notify":{
-            "denied":{
-                "title":"Access denied",
-                "message":"Web Push Access denied"
-            },
-            "granted":{
-                "title":"Success",
-                "message":"Success subscribed Web Push"
-            }
-        },
-        "refresh":{
-            "title":"Update available",
-            "message":["<a href="," style=\"color: #353432;\">Website updated, please <strong style=\"color: #006bff\">click<strong> to refresh</a>"]
-        }
-    },
-    "message":{
-        "workingOn":"I am working on this part, please check back later~"
-    },
-    "beian":"京ICP备16033945号-2"
+	"name": "Fred Liang",
+	"navigation": [
+		"Home",
+		"Photo",
+		"Story",
+		"About",
+		"Blog"
+	],
+	"visitors": "visits",
+	"position": [
+		"Product Manager",
+		"Visual Designer",
+		"Film Producer",
+		"Web Developer"
+	],
+	"whoAmI": {
+		"title": "Who Am I",
+		"highSchool": "Since 2013, I started working on Video Production. Being Obsessed with providing gorgeous video effects and significant thoughts to my schoolmates.",
+		"college": "During my college life, I joined <a target=\"_blank\" rel=\"noopener\" href=\"//hustunique.com\">Unique Studio</a>. My work has changed from Visual Design to Product Management. Dozens of technologies and approaches had been tried to enrich my horizons.",
+		"showWorksDescription": "With my pleasure, here are some of my works:",
+		"workList": [
+			"A Domestic Hackathon",
+			"A Hackathon Management System",
+			"A Tool Present Relationships in Unique Studio"
+		],
+		"besides": "Besides that, I have been maintaining some infrastructure for my collaborators.",
+		"infrastructuresDescription": [
+			"A Docker Container Manage System",
+			" A Business Intelligence System",
+			"Open platform of Unique Studio"
+		]
+	},
+	"story": {
+		"title": "StoryBoard",
+		"list": [
+			{},
+			{},
+			{
+				"block": [
+					{
+						"id": 1,
+						"type": "banner",
+						"src": "/img/banner/unionsql-banner.svg"
+					},
+					{
+						"id": 2,
+						"type": "content",
+						"title": "Introduction",
+						"content": "<p>UnionSQL provides a unified data query service for millet products, operations, R&D, sales, etc, and empowers the company's core business. It can replace the existing job scheduling platform in the context of interactive query, providing a more convenient and convenient data query entry.</p><br><p>I mainly responsible for the interactive query during the internship</p>",
+						"backgroundColor": "grey"
+					},
+					{
+						"id": 3,
+						"type": "content",
+						"title": "Public Information Reference",
+						"content": "<a href=\"https://mp.weixin.qq.com/s/JPK_wHHaI6KPbw3hP34H5g\">Xiaomi Big Data: Building an efficient, easy-to-use one-stop OLAP solution with Apache Kylin</a><br><a href=\"https://kyligence.io/zh/2018/12/03/xiaomi-use-apache-kylin-to-build-an-efficient-and-easy-to-use-one-step-olap/\">[User case]Xiaomi Big Data: Building an efficient, easy-to-use one-stop OLAP solution with Apache Kylin</a>",
+						"backgroundColor": "white"
+					}
+				]
+			}
+		]
+	},
+	"photo": {
+		"title": "Photo",
+		"description": "<p>To see the world, things dangerous to come to,</p><p>to see behind walls,  to draw closer,</p><p>to find each other,  and to feel.</p><p>That is the purpose of life.</p>"
+	},
+	"about": {
+		"title": "About Me"
+	},
+	"serviceworker": {
+		"notify": {
+			"denied": {
+				"title": "Access denied",
+				"message": "Web Push Access denied"
+			},
+			"granted": {
+				"title": "Success",
+				"message": "Success subscribed Web Push"
+			}
+		},
+		"refresh": {
+			"title": "Update available",
+			"message": [
+				"<a href=",
+				" style=\"color: #353432;\">Website updated, please <strong style=\"color: #006bff\">click<strong> to refresh</a>"
+			]
+		}
+	},
+	"message": {
+		"workingOn": "I am working on this part, please check back later~"
+	},
+	"beian": "京ICP备16033945号-2"
 }
