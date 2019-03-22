@@ -41,20 +41,20 @@
 					{
 						"id": 1,
 						"type": "banner",
-						"src": "/img/banner/unionsql-banner.svg"
+						"imgSrc": "/img/banner/unionsql-banner.svg"
 					},
 					{
 						"id": 2,
 						"type": "content",
 						"title": "Introduction",
-						"content": "<p>UnionSQL provides a unified data query service for millet products, operations, R&D, sales, etc, and empowers the company's core business. It can replace the existing job scheduling platform in the context of interactive query, providing a more convenient and convenient data query entry.</p><br><p>I mainly responsible for the interactive query during the internship</p>",
+						"content": "<p>UnionSQL provides a unified data query service for millet products, operations, R&D, sales, etc, and empowers the company's core business. It can replace the existing job scheduling platform in the context of interactive query, providing a more convenient and convenient data query entry.</p><br><p>I mainly responsible for the interactive query during the internship.</p>",
 						"backgroundColor": "grey"
 					},
 					{
 						"id": 3,
 						"type": "content",
 						"title": "Public Information Reference",
-						"content": "<a href=\"https://mp.weixin.qq.com/s/JPK_wHHaI6KPbw3hP34H5g\">Xiaomi Big Data: Building an efficient, easy-to-use one-stop OLAP solution with Apache Kylin</a><br><a href=\"https://kyligence.io/zh/2018/12/03/xiaomi-use-apache-kylin-to-build-an-efficient-and-easy-to-use-one-step-olap/\">[User case]Xiaomi Big Data: Building an efficient, easy-to-use one-stop OLAP solution with Apache Kylin</a>",
+						"content": "<a target=\"_blank\" href=\"https://mp.weixin.qq.com/s/JPK_wHHaI6KPbw3hP34H5g\">Xiaomi Big Data: Building an efficient, easy-to-use one-stop OLAP solution with Apache Kylin</a><br><a target=\"_blank\" href=\"https://kyligence.io/zh/2018/12/03/xiaomi-use-apache-kylin-to-build-an-efficient-and-easy-to-use-one-step-olap/\">[User case]Xiaomi Big Data: Building an efficient, easy-to-use one-stop OLAP solution with Apache Kylin</a>",
 						"backgroundColor": "white"
 					}
 				]

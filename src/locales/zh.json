@@ -45,7 +45,7 @@
 					{
                         "id":1,
 						"type": "banner",
-						"src": "/img/banner/unionsql-banner.svg"
+						"imgSrc": "/img/banner/unionsql-banner.svg"
 					},
 					{
                         "id":2,
@@ -57,8 +57,15 @@
 					{
                         "id":3,
 						"type": "content",
+						"title": "背景",
+						"content": "<p>UnionSQL 为小米产品、运营、研发、销售等人员提供了一个统一的数据查询服务,赋能公司核心业务<br>其可以在交互式查询的场景下替换现有作业调度平台，提供更加快捷方便的数据查询入口<br>实习期间主要负责交互式查询部分</p>",
+						"backgroundColor": "grey"
+					},
+					{
+                        "id":4,
+						"type": "content",
 						"title": "公开资料参考",
-						"content": "<a href=\"https://mp.weixin.qq.com/s/JPK_wHHaI6KPbw3hP34H5g\">小米大数据：借助Apache Kylin打造高效、易用的一站式OLAP解决方案</a><br><a href=\"https://kyligence.io/zh/2018/12/03/xiaomi-use-apache-kylin-to-build-an-efficient-and-easy-to-use-one-step-olap/\">【用户案例】小米大数据：借助Apache Kylin打造高效、易用的一站式OLAP解决方案</a>",
+						"content": "<a target=\"_blank\" href=\"https://mp.weixin.qq.com/s/JPK_wHHaI6KPbw3hP34H5g\">小米大数据：借助Apache Kylin打造高效、易用的一站式OLAP解决方案</a><br><a href=\"https://kyligence.io/zh/2018/12/03/xiaomi-use-apache-kylin-to-build-an-efficient-and-easy-to-use-one-step-olap/\">【用户案例】小米大数据：借助Apache Kylin打造高效、易用的一站式OLAP解决方案</a>",
 						"backgroundColor": "white"
 					}
 				]

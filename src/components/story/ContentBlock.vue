@@ -13,8 +13,18 @@ export default {
 </script>
 
 <style>
+@media screen and (min-width:221px) and (max-width:799px){
+  .content-block {
+    padding: 2rem 2rem 3rem 2rem;
+  }
+}
+
+@media screen and (min-width:799px){
+  .content-block {
+    padding: 2rem 14rem 3rem 14rem;
+  }
+}
 .content-block {
-  padding: 2rem 14rem 3rem 14rem;
   min-height: 8em;
   text-align: left;
 }
@@ -28,8 +38,9 @@ export default {
 }
 
 .content-block > h2 {
+  font-size: 2rem;
   font-weight: 900;
-  color: #a9a9a9;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .content-block > div > p {

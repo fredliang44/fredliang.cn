@@ -185,10 +185,10 @@ export default {
   color: #353432;
 }
 .en {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 .zh {
-  font-family: 'FZBWKSJW','Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'FZBWKSJW', 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 #lang-switch {
@@ -241,8 +241,15 @@ a {
   transition: color 1s;
 }
 body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
   top: 0;
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Product Sans", Arial, Helvetica, sans-serif !important;
 }
 </style>

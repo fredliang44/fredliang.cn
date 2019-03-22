@@ -27,7 +27,7 @@ export default {
   methods: {
     switchPage: function (url) {
       if (url !== '') {
-        window.open(url)
+        this.$router.push(url)
       } else {
         this.$notify({
           title: 'Sorry!',
@@ -106,6 +106,10 @@ export default {
 .project-info:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+/* .project-wrapper:hover > .project-background {
+  transform: scale3d(1.2, 1.2, 1);
+} */
 
 .project-background {
   padding: calc(500%/18);
