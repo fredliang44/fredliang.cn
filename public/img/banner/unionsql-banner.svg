@@ -23,18 +23,18 @@
             <g id="Group-2">
                 <g id="Unique">
                     <text id="Union" fill="#FFFFFF">
-                        <tspan x="5.16" y="82">UNION</tspan>
+                        <tspan x="5.16" y="82" font-family = "sans-serif">UNION</tspan>
                     </text>
                     <text id="Union" fill="#FF9200">
-                        <tspan x="2.13692308" y="79">UNION</tspan>
+                        <tspan x="2.13692308" y="79" font-family = "sans-serif">UNION</tspan>
                     </text>
                 </g>
-                <g id="Group" transform="translate(236.000000, 0.000000)">
+                <g id="Group" transform="translate(270.000000, 0.000000)">
                     <text id="SQL" fill="#F49442">
-                        <tspan x="6.96461538" y="82">SQL</tspan>
+                        <tspan x="6.96461538" y="82" font-family = "sans-serif">SQL</tspan>
                     </text>
                     <text id="Hackday" fill="#FFFFFF">
-                        <tspan x="1.92615385" y="79">SQL</tspan>
+                        <tspan x="1.92615385" y="79" font-family = "sans-serif">SQL</tspan>
                     </text>
                 </g>
             </g>

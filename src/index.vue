@@ -97,12 +97,35 @@ export default {
     src: url("./assets/font/FZBWKSJW.eot"); /* IE9 */
     src: url("./assets/font/FZBWKSJW.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
     
-    url("./assets/font/FZBWKSJW.woff") format("woff"), /* chrome、firefox */
-    url("./assets/font/FZBWKSJW.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
-    
-    url("./assets/font/FZBWKSJW.svg#FZBWKSJW") format("svg"); /* iOS 4.1- */
+        url("./assets/font/FZBWKSJW.woff") format("woff"), /* chrome、firefox */
+        url("./assets/font/FZBWKSJW.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+        url("./assets/font/FZBWKSJW.svg#FZBWKSJW") format("svg"); /* iOS 4.1- */
     font-style: normal;
     font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('./assets/font/ProductSans-Bold.woff2');
+    src: url('./assets/font/ProductSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/ProductSans-Bold.woff2') format('woff2'),
+        url('./assets/font/ProductSans-Bold.woff') format('woff'),
+        url('./assets/font/ProductSans-Bold.ttf') format('truetype'),
+        url('./assets/font/ProductSans-Bold.svg#ProductSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    src: url('./assets/font/ProductSans-Regular.woff2');
+    src: local('Product Sans') url('./assets/font/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./assets/font/ProductSans-Regular.woff2') format('woff2'),
+        url('./assets/font/ProductSans-Regular.woff') format('woff'),
+        url('./assets/font/ProductSans-Regular.ttf') format('truetype'),
+        url('./assets/font/ProductSans-Regular.svg#ProductSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @media screen and (min-width:221px) and (max-width:799px){
