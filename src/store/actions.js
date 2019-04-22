@@ -19,3 +19,13 @@ export const updatePhotoList = ({ commit }) => {
       console.log(error.response)
     })
 }
+
+export const getArticleList = ({ commit }) => {
+  axios.get('https://open.fredliang.cn/blog/article')
+    .then(response => {
+      commit('setArticleList', response.data.data)
+    })
+    .catch(error => {
+      console.log(error.response)
+    })
+}

@@ -5,5 +5,9 @@ export default {
 
   setPhotoList (state, photoList) {
     state.photoList = photoList
+  },
+
+  setArticleList (state, articleList) {
+    state.articleList = articleList
   }
 }

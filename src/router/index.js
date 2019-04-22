@@ -4,7 +4,7 @@ import Router from 'vue-router'
 const Home = () => import('@/pages/Home')
 const Photo = () => import('@/pages/Photo')
 const StoryBoard = () => import('@/pages/StoryBoard')
-const StoryList = () => import('@/pages/StoryList')
+const StoryContent = () => import('@/pages/StoryContent')
 const About = () => import('@/pages/About')
 const NotFound = () => import('@/pages/NotFound')
 
@@ -35,8 +35,8 @@ export default new Router({
     },
     {
       path: '/story/:project',
-      name: 'Storylist',
-      component: StoryList
+      name: 'StoryContent',
+      component: StoryContent
     },
     {
       path: '/about/',

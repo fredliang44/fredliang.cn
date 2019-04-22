@@ -1,15 +1,15 @@
 <template>
   <div class="top">
     <el-row :gutter="24">
-      <div class="project-list" v-for="project in projects"  :key="project.id">
+      <div class="project-list" v-for="article in articleList"  :key="article.ID">
         <el-col :span="span" style="padding:0 4em 4em 0">
           <div class="grid-content bg-purple card">
-            <label @click="switchPage(project.url)">
+            <label @click="switchPage('/story/' + article.path, article.content)">
               <div style="position:relative">
                 <div class="project-wrapper">
                   <div class="project-info">
                   </div>
-                  <div class="project-background" :style="'background-image: url(' + project.imgURL + ');'"></div>
+                  <div class="project-background" :style="'background-image: url(' + article.imgsrc + ');'"></div>
                 </div>
               </div>
             </label>
@@ -22,11 +22,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'ProjectList',
   methods: {
-    switchPage: function (url) {
-      if (url !== '') {
+    switchPage: function (url, content) {
+      if (content !== '') {
         this.$router.push(url)
       } else {
         this.$notify({
@@ -66,12 +67,16 @@ export default {
     }
   },
   mounted () {
+    this.$store.dispatch('getArticleList')
     if (this.isMobile()) {
       this.span = 24
     } else {
       this.span = 8
     }
-  }
+  },
+  computed: mapState([
+    'articleList'
+  ])
 }
 </script>
 <style>
