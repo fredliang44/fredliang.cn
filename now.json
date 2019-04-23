@@ -1,18 +1,6 @@
 {
     "name": "fredliang",
-    "type": "static",
-    "static": {
-      "public": "dist",
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
     "alias": "lzb.im",
-    "files": [
-      "dist"
-    ],
-    "version":1
-  }
+    "version": 2,
+    "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+}

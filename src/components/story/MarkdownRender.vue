@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import '@/libs/prism.js'
 import VueMarkdown from 'vue-markdown'
 import 'github-markdown-css'
 
@@ -15,7 +16,9 @@ export default {
 }
 </script>
 
-<style>
+<style scpoed>
+@import '../../libs/prism.css';
+
 @media screen and (min-width:221px) and (max-width:799px){
   .markdown-body {
     text-align: left;
@@ -60,65 +63,27 @@ export default {
 }
 
 .markdown-body ol {
-  color: rgba(0, 0, 0, 0.2);
-  border-left: 4px solid;
-  padding-left: 1.4em;
+  padding-left: 1.8rem;
 }
 
 .markdown-body li {
+  list-style-type: decimal;
+  display: list-item;
+  color: #24292e;
+  font-weight: 400;
   font-size: 16px;
 }
-/* @media screen and (min-width:221px) and (max-width:799px){
-  .content-block {
-    padding: 2rem 2rem 3rem 2rem;
-  }
-}
 
-@media screen and (min-width:799px){
-  .content-block {
-    padding: 2rem 14rem 3rem 14rem;
-  }
-}
-.content-block {
-  min-height: 8em;
-  text-align: left;
-}
-
-.bg-grey {
-  background-color: #f7f7f7;
-}
-
-.bg-white {
-  background-color: white;
-}
-
-.content-block > h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.content-block > div > p {
-  color: #3c3c3c;
-  font-size: 0.9rem;
-  font-weight: 400;
-  line-height: 1.4rem;
-  letter-spacing: 0.06rem;
-  margin: 0;
-}
-
-.content-block > div > a {
-  transition-duration: 0.2s;
-  color: #3c3c3c;
-  font-size: 0.9rem;
-  font-weight: 500;
+.markdown-body a {
+  color: rgba(0,0,0,0.58);
   text-decoration: underline;
-  line-height: 1.4rem;
-  letter-spacing: 0.06rem;
-  margin: 0;
+  font-weight: 500;
 }
 
-.content-block > div > a:hover {
-  color: black;
-} */
+.markdown-body {
+  letter-spacing: 1px;
+}
+.markdown-body code {
+  background-color: rgba(0, 0, 0, .1)
+}
 </style>

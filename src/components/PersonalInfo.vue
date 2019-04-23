@@ -153,6 +153,7 @@ export default {
   mounted: function () {
     this.$store.dispatch('updatePhotoList')
     this.$store.dispatch('updateVisitors')
+    this.$store.dispatch('getArticleList')
       .then(() => {
         this.flushVisitor()
       })

@@ -156,8 +156,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @media screen and (min-width:221px) and (max-width:799px){
+  .photo-block img {
+        box-shadow: 0 16px 60px 0 rgba(0,0,0,0.3), 0 6px 12px 0 rgba(0,0,0,.1);
+  }
+
   .switcher {
     font-size: 1em;
     border: 1.6px solid #353432;
@@ -185,6 +189,10 @@ export default {
   }
 }
 @media screen and (min-width:799px){
+  .photo-block img {
+        box-shadow: 0 16px 60px 0 rgba(0,0,0,0.3), 0 6px 12px 0 rgba(0,0,0,.1);
+  }
+
   .switcher {
     font-size: 1.2em;
     border: 2px solid #353432;
@@ -227,6 +235,10 @@ export default {
 
 .paragraph {
   text-align: left;
+}
+
+.photo-block {
+  margin-bottom: 4rem;
 }
 
 button:disabled {
