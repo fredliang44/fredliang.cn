@@ -179,6 +179,19 @@ export default {
     font-size: 1em;
   }
 
+  .photo-block {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .photo-block:not(:first-of-type){
+    margin-top: 3rem;
+  }
+
+  .photo-info {
+    margin-bottom: 1rem;
+  }
+
   h2 {
     margin-bottom: 0.6rem;
     font-size: 1.6em;
@@ -189,6 +202,10 @@ export default {
   }
 }
 @media screen and (min-width:799px){
+  .time > p {
+      font-size: 1.6em;
+  }
+
   .photo-block img {
         box-shadow: 0 16px 60px 0 rgba(0,0,0,0.3), 0 6px 12px 0 rgba(0,0,0,.1);
   }
@@ -203,9 +220,20 @@ export default {
     font-size: 1.2em;
     margin-bottom: 4em;
   }
-  .time > p {
-      font-size: 1.6em;
+
+  .photo-block {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
   }
+
+  .photo-block:not(:first-of-type){
+    margin-top: 5rem;
+  }
+
+  .photo-info {
+    margin-bottom: 3rem;
+  }
+
   h2 {
     font-size: 2em;
   }
@@ -237,10 +265,6 @@ export default {
   text-align: left;
 }
 
-.photo-block {
-  margin-bottom: 4rem;
-}
-
 button:disabled {
   opacity: 0.4;
 }
@@ -252,6 +276,7 @@ button:disabled:hover {
 h1, ul {
   text-align: left;
 }
+
 h1 {
   color: #353432;
   margin: 0;

@@ -3,7 +3,6 @@ var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var AliyunossWebpackPlugin = require('aliyunoss-webpack-plugin')
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 var path = require('path')
-var oss = require('./oss')
 var manifestJSON = require('./public/manifest.json')
 
 module.exports = {
@@ -26,52 +25,64 @@ module.exports = {
     }
   },
   configureWebpack: config => {
+    var plugins = [
+      new PrerenderSpaPlugin({
+        // Absolute path to compiled SPA
+        staticDir: path.resolve(__dirname, './dist'),
+        // List of routes to prerender
+        routes: ['/', '/photo', '/story', '/about'],
+        // Options
+        postProcess (context) {
+          let titles = {
+            '/': 'Fred Liang',
+            '/photo': 'Photo',
+            '/story': 'Story',
+            '/about': 'About Me'
+          }
+          context.html = context.html.replace(
+            /<title>[^<]*<\/title>/i,
+            `<title>${titles[context.route]}</title>`
+          )
+          return context
+        }
+      }),
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          compress: {
+            warnings: false,
+            drop_debugger: true,
+            drop_console: false
+          }
+        },
+        sourceMap: false,
+        parallel: true
+      })]
+
+    var ossPlugin = new AliyunossWebpackPlugin({
+      buildPath: 'dist/**',
+      accessKeyId: process.env.AliAccessKeyID,
+      accessKeySecret: process.env.AliAccessKeySecret,
+      region: process.env.WebsiteOSSRegion,
+      bucket: process.env.WebsiteOSSBucket,
+      deleteAll: true,
+      generateObjectPath: function (filename, file) {
+        return file.replace(/dist\//, '')
+      }
+    })
+
+    // dev environment
     if (process.env.NODE_ENV !== 'production') return
+
+    // now environment
+    if (process.env.NOW_ENV !== undefined) {
+      return {
+        plugins: plugins
+      }
+    }
+    // build environment
+    plugins.push(ossPlugin)
     return {
-      plugins: [
-        new PrerenderSpaPlugin({
-          // Absolute path to compiled SPA
-          staticDir: path.resolve(__dirname, './dist'),
-          // List of routes to prerender
-          routes: ['/', '/photo', '/story', '/about'],
-          // Options
-          postProcess (context) {
-            let titles = {
-              '/': 'Fred Liang',
-              '/photo': 'Photo',
-              '/story': 'Story',
-              '/about': 'About Me'
-            }
-            context.html = context.html.replace(
-              /<title>[^<]*<\/title>/i,
-              `<title>${titles[context.route]}</title>`
-            )
-            return context
-          }
-        }),
-        new UglifyJsPlugin({
-          uglifyOptions: {
-            compress: {
-              warnings: false,
-              drop_debugger: true,
-              drop_console: false
-            }
-          },
-          sourceMap: false,
-          parallel: true
-        }),
-        new AliyunossWebpackPlugin({
-          buildPath: 'dist/**',
-          region: oss.region,
-          accessKeyId: oss.accessKeyId,
-          accessKeySecret: oss.accessKeySecret,
-          bucket: oss.bucket,
-          deleteAll: true,
-          generateObjectPath: function (filename, file) {
-            return file.replace(/dist\//, '')
-          }
-        })
-      ]
+      plugins: plugins
     }
   }
 }

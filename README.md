@@ -8,15 +8,17 @@
 yarn install
 ```
 
-### 1.1 Create oss.js in root path with alibabacloud oss config
+### 1.1 Set env variables in your environment with alibabacloud oss config
 
-``` javascript
-module.exports = {
-  accessKeyId: '',
-  accessKeySecret: '',
-  region: '',
-  bucket: ''
-}
+``` shell
+# OSs config
+export WebsiteOSSRegion=""
+export WebsiteOSSBucket=""
+
+
+# Ali config
+export AliAccessKeyID=""
+export AliAccessKeySecret=""
 ```
 
 ### 1.2 Compiles and hot-reloads for development
