@@ -17,7 +17,7 @@
           <div :style="'height: 0;'+' background-color: #' + item.averageHue  +'; padding-bottom: '+item.height/item.width * 100 +'%;'"  >
             <v-lazy-image 
             class="img-zoomable"
-            style="width:100%"
+            style="width:100%;"
             :alt="item.title" 
             :src-placeholder="item.url + '?x-oss-process=image/resize,w_512/quality,Q_50/blur,r_3,s_2'" 
             :src="item.url + '?x-oss-process=image/resize,h_1080'"  
@@ -158,9 +158,6 @@ export default {
 
 <style scoped>
 @media screen and (min-width:221px) and (max-width:799px){
-  .photo-block img {
-        box-shadow: 0 16px 60px 0 rgba(0,0,0,0.3), 0 6px 12px 0 rgba(0,0,0,.1);
-  }
 
   .switcher {
     font-size: 1em;
@@ -206,8 +203,8 @@ export default {
       font-size: 1.6em;
   }
 
-  .photo-block img {
-        box-shadow: 0 16px 60px 0 rgba(0,0,0,0.3), 0 6px 12px 0 rgba(0,0,0,.1);
+  .photo-block {
+    padding: 0 15%;
   }
 
   .switcher {
@@ -238,9 +235,19 @@ export default {
     font-size: 2em;
   }
 }
+
+.photo-block img {
+  box-shadow: 0 16px 60px 0 rgba(0, 0, 0, 0.35), 0 6px 12px 0 rgba(0, 0, 0, .1);
+}
+
+.photo-block img:hover {
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, .1);
+}
+
 .none {
   display: none;
 }
+
 .back-to-top {
   right: 10%;
   bottom: 15%;
@@ -250,6 +257,7 @@ export default {
   width: 4em;
   height: 4em;
 }
+
 .switch-page {
   margin-top: 2em;
   display: flex;
@@ -259,6 +267,10 @@ export default {
 
 #photo-wrapper {
   padding-top:3px; border-top:2px solid #353432
+}
+
+.photo-block img {
+  transition-duration: 0.4s;
 }
 
 .paragraph {
@@ -281,4 +293,5 @@ h1 {
   color: #353432;
   margin: 0;
 }
+
 </style>

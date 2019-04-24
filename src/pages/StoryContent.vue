@@ -22,7 +22,7 @@ export default {
     Banner,
     MarkdownRender
   },
-  mounted () {
+  Created () {
     this.$store.dispatch('getArticleList')
   },
   computed: mapState([

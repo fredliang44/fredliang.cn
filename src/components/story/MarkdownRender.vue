@@ -22,7 +22,7 @@ export default {
 @media screen and (min-width:221px) and (max-width:799px){
   .markdown-body {
     text-align: left;
-    padding: 5rem 2rem 6rem 2rem;
+    padding: 3rem 2rem 3rem 2rem;
     font-weight: 400;
   }
 }
@@ -30,7 +30,7 @@ export default {
 @media screen and (min-width:799px){
   .markdown-body {
     text-align: left;
-    padding: 5rem 20rem 6rem 20rem;
+    padding: 5rem 20% 6rem 20%;
     font-weight: 400;
   }
 
@@ -81,6 +81,7 @@ export default {
 }
 
 .markdown-body {
+  font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial", sans-serif;
   letter-spacing: 1px;
 }
 .markdown-body code {

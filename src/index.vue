@@ -193,8 +193,9 @@ export default {
   }
 } 
 
-
-
+::selection {
+  background: rgb(0, 0, 0, 0.1);
+}
 
 .header > ul > li > a:hover {
   color: #353432;

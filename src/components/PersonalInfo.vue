@@ -152,11 +152,10 @@ export default {
   },
   mounted: function () {
     this.$store.dispatch('updatePhotoList')
-    this.$store.dispatch('updateVisitors')
+    this.$store.dispatch('updateVisitors').then(() => {
+      this.flushVisitor()
+    })
     this.$store.dispatch('getArticleList')
-      .then(() => {
-        this.flushVisitor()
-      })
   },
   computed: mapState([
     'visitors'

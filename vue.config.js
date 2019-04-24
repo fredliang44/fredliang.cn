@@ -37,6 +37,7 @@ module.exports = {
             '/': 'Fred Liang',
             '/photo': 'Photo',
             '/story': 'Story',
+            '/story/unionsql': 'UnionSQL',
             '/about': 'About Me'
           }
           context.html = context.html.replace(
