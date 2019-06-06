@@ -12,6 +12,9 @@ export default {
   props: ['title', 'content', 'backgroundColor'],
   components: {
     VueMarkdown
+  },
+  created () {
+    this.$store.dispatch('getArticleList')
   }
 }
 </script>
@@ -81,7 +84,7 @@ export default {
 }
 
 .markdown-body {
-  font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial", sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
   letter-spacing: 1px;
 }
 .markdown-body code {
