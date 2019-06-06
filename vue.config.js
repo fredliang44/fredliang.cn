@@ -49,8 +49,8 @@ module.exports = {
       }),
       new UglifyJsPlugin({
         uglifyOptions: {
+          warnings: false,
           compress: {
-            warnings: false,
             drop_debugger: true,
             drop_console: false
           }
