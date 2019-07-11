@@ -7,6 +7,12 @@ import VueAnime from 'vue-animejs'
 import Index from '@/index.vue'
 import router from '@/router'
 import './plugins/element.js'
+import VueAnalytics from 'vue-analytics'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-140497401-2',
+  router
+})
 
 Vue.use(VueAnime)
 

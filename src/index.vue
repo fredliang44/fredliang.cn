@@ -209,7 +209,7 @@ export default {
   color: #353432;
 }
 .en {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Product Sans', 'Roboto', Arial, Helvetica, sans-serif;
 }
 .zh {
   font-family: 'FZBWKSJW', 'Roboto', Arial, Helvetica, sans-serif;

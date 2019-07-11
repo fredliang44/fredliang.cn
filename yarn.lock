@@ -9612,6 +9612,11 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-analytics@^5.16.4:
+  version "5.16.4"
+  resolved "https://registry.npm.taobao.org/vue-analytics/download/vue-analytics-5.16.4.tgz#7f9e197cbc64afac96884a05214b17efaf8e9d09"
+  integrity sha1-f54ZfLxkr6yWiEoFIUsX76+OnQk=
+
 vue-animejs@^1.0.1:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/vue-animejs/download/vue-animejs-1.0.2.tgz#38c39c8fa5864e18b9020c2d36c290b4c67606a5"
