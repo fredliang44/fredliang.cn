@@ -1,25 +1,38 @@
 <template>
-  <div :class="'content-block'  + ' bg-' + backgroundColor">
+  <div :class="'content-block' + ' bg-' + backgroundColor">
     <h2>{{ title }}</h2>
-    <div v-html="content"></div>
+    <div v-html="content" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContentBlock',
-  props: ['title', 'content', 'backgroundColor']
-}
+  name: "ContentBlock",
+  props: {
+    title: {
+      type: String,
+      default: ""
+    },
+    content: {
+      type: String,
+      default: ""
+    },
+    backgroundColor: {
+      type: String,
+      default: ""
+    }
+  }
+};
 </script>
 
 <style>
-@media screen and (min-width:221px) and (max-width:799px){
+@media screen and (min-width: 221px) and (max-width: 799px) {
   .content-block {
     padding: 2rem 2rem 3rem 2rem;
   }
 }
 
-@media screen and (min-width:799px){
+@media screen and (min-width: 799px) {
   .content-block {
     padding: 2rem 14rem 3rem 14rem;
   }

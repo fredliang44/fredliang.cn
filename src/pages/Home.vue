@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Background/>
-    <PersonalInfo/>
-    <WhoAmI/>
+    <Background />
+    <PersonalInfo />
+    <WhoAmI />
   </div>
 </template>
 

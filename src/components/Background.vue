@@ -1,7 +1,10 @@
 <template>
-    <div style="color:#ffffff">
-        <div id="background" style="height: 100%"></div>
-    </div>
+  <div style="color:#ffffff">
+    <div
+      id="background"
+      style="height: 100%"
+    />
+  </div>
 </template>
 
 

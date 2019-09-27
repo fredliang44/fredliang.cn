@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PersonalStatement/>
+    <PersonalStatement />
   </div>
 </template>
 

@@ -1,9 +1,14 @@
 <template>
   <div>
     <div class="top">
-      <h1 :class="this.$i18n.locale" style="height: 1.5em;">{{ $t("story.title") }}</h1>
+      <h1
+        :class="this.$i18n.locale"
+        style="height: 1.5em;"
+      >
+        {{ $t("story.title") }}
+      </h1>
     </div>
-    <ProjectList/>
+    <ProjectList />
   </div>
 </template>
 

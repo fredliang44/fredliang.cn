@@ -33,7 +33,7 @@ module.exports = {
         routes: ['/', '/photo', '/story', '/about'],
         // Options
         postProcess (context) {
-          let titles = {
+          const titles = {
             '/': 'Fred Liang',
             '/photo': 'Photo',
             '/story': 'Story',

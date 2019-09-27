@@ -1,7 +1,10 @@
 <template>
-    <div class="top" :class="this.$i18n.locale" >
-        <h1>{{ $t("about.title") }}</h1>
-    </div>
+  <div
+    class="top"
+    :class="this.$i18n.locale"
+  >
+    <h1>{{ $t("about.title") }}</h1>
+  </div>
 </template>
 
 <script>

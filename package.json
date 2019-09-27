@@ -51,6 +51,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.3",
     "node-sass": "^4.9.4",
     "prettier-eslint-cli": "^5.0.0",
     "v-lazy-image": "^1.2.2",
@@ -66,7 +67,6 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
       "eslint:recommended"
     ],
     "rules": {},

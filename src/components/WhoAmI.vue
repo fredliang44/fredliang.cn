@@ -1,40 +1,88 @@
 <template>
-    <div class="part2-wrapper">
-      <div class="part2"  :class="this.$i18n.locale">
-        <h1 id="statement-title" :class="this.$i18n.locale">{{ $t("whoAmI.title") }}</h1>
-        <div class="statement">
-          <p>{{ $t("whoAmI.highSchool") }}</p>
-          <p v-html="$t('whoAmI.college')"></p>
-          <p>{{ $t("whoAmI.showWorksDescription") }}</p>
+  <div class="part2-wrapper">
+    <div
+      class="part2"
+      :class="this.$i18n.locale"
+    >
+      <h1
+        id="statement-title"
+        :class="this.$i18n.locale"
+      >
+        {{ $t("whoAmI.title") }}
+      </h1>
+      <div class="statement">
+        <p>{{ $t("whoAmI.highSchool") }}</p>
+        <p v-html="$t('whoAmI.college')" />
+        <p>{{ $t("whoAmI.showWorksDescription") }}</p>
           
-          <ul>
-            <li>
-              <p>
-                <a href="//hack.hustunique.com" rel="noopener" target="_blank">
+        <ul>
+          <li>
+            <p>
+              <a
+                href="//hack.hustunique.com"
+                rel="noopener"
+                target="_blank"
+              >
                 Unique Hackday
-                </a> ---- {{ $t("whoAmI.workList[0]") }}
-              </p>
-            </li>
+              </a> ---- {{ $t("whoAmI.workList[0]") }}
+            </p>
+          </li>
 
-            <li>
-              <p>
-                <a href="//console.hack.hustunique.com" rel="noopener" target="_blank">
+          <li>
+            <p>
+              <a
+                href="//console.hack.hustunique.com"
+                rel="noopener"
+                target="_blank"
+              >
                 Unique Hackday Console
-                </a> ---- {{ $t("whoAmI.workList[1]") }}
-              </p>
-            </li>
-            <li><p><a href="//fmt.hustunique.com" rel="noopener" target="_blank">Family Tree</a> ---- {{ $t("whoAmI.workList[2]") }}</p></li>
-          </ul>
+              </a> ---- {{ $t("whoAmI.workList[1]") }}
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="//fmt.hustunique.com"
+                rel="noopener"
+                target="_blank"
+              >Family Tree</a> ---- {{ $t("whoAmI.workList[2]") }}
+            </p>
+          </li>
+        </ul>
           
-          <p>{{ $t("whoAmI.besides") }}</p>
-          <ul>
-            <li><p><a href="//manager.fredliang.cn" rel="noopener" target="_blank">Rancher</a> ---- {{ $t("whoAmI.infrastructuresDescription[0]") }}</p></li>
-            <li><p><a href="//data.fredliang.cn" rel="noopener" target="_blank">Metabase</a> ---- {{ $t("whoAmI.infrastructuresDescription[1]") }}</p></li>
-            <li><p><a href="//open.hustunique.com" rel="noopener" target="_blank">Open Platform</a> ---- {{ $t("whoAmI.infrastructuresDescription[2]") }}</p></li>
-          </ul>
-        </div>
+        <p>{{ $t("whoAmI.besides") }}</p>
+        <ul>
+          <li>
+            <p>
+              <a
+                href="//manager.fredliang.cn"
+                rel="noopener"
+                target="_blank"
+              >Rancher</a> ---- {{ $t("whoAmI.infrastructuresDescription[0]") }}
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="//data.fredliang.cn"
+                rel="noopener"
+                target="_blank"
+              >Metabase</a> ---- {{ $t("whoAmI.infrastructuresDescription[1]") }}
+            </p>
+          </li>
+          <li>
+            <p>
+              <a
+                href="//open.hustunique.com"
+                rel="noopener"
+                target="_blank"
+              >Open Platform</a> ---- {{ $t("whoAmI.infrastructuresDescription[2]") }}
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

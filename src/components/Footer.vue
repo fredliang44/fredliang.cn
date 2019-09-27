@@ -1,8 +1,18 @@
 <template>
   <div class="footer">
     <div id="context">
-        <p><a href="//www.yuque.com/fredliang/blog/artboards/37891" target="_blank">Design</a> & <a href="//github.com/fredliang44/fredliang.cn" target="_blank">Code</a> With ❤️ By Fred Liang</p>
-        <p class="zh">京ICP备16033945号-2</p>
+      <p>
+        <a
+          href="//www.yuque.com/fredliang/blog/artboards/37891"
+          target="_blank"
+        >Design</a> & <a
+          href="//github.com/fredliang44/fredliang.cn"
+          target="_blank"
+        >Code</a> With ❤️ By Fred Liang
+      </p>
+      <p class="zh">
+        京ICP备16033945号-2
+      </p>
     </div>
   </div>
 </template>
